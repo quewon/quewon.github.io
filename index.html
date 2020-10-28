@@ -1,0 +1,80 @@
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>hi</title>
+<style>
+body {
+	margin: 0;
+	height: 100vh;
+	font-family: Yeseva One, serif;
+}
+
+.container {
+	background-color: lightgray;
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	height: 300px;
+	padding: 20px;
+	text-align: center;
+	color: gray;
+}
+h1 {
+	color: white;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	background-color: white;
+	cursor: pointer;
+}
+::selection {
+	background-color: white;
+}
+.nav {
+	color: white;
+}
+</style>
+</head>
+
+<body>
+<div id="main" class="container">
+  	<h1>quewon's cool and awesome website</h1>
+	<a onclick='screen("prototype-shop")'>game prototypes</a><br />
+	<a onclick='screen("contact")'>contact... me?!</a>
+</div>
+
+<div id="prototype-shop" class="container" style="display:none">
+  	<h1>quewon's cool and awesome prototype shop</h1>
+	<a href="garden-2.1">garden</a><br />
+	<a href href="oxhi">oxhi</a><br />
+	<a href="warden">warden</a><br />
+	<a href="necromancy_club">necromancy.club</a><br />
+	<a href="feeding-conway">feeding-conway</a><br />
+	<br />
+	<a onclick='screen("main")' class="nav">back to main</a>
+</div>
+
+<div id="contact" class="container" style="display:none">
+  	<h1>quewon's cool and awesome prototype shop</h1>
+	just leave me an issue on github<br />
+	<br />
+	<a onclick='screen("main")' class="nav">back to main</a>
+</div>
+</body>
+
+<script>
+var screens = document.getElementsByClassName("container");
+function screen(id) {
+	for (let i=0; i<screens.length; i++) {
+		screens[i].style.display = 'none'
+	}
+	document.getElementById(id).style.display = 'block'
+}
+</script>
+</html>
