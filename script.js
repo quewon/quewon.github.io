@@ -1,8 +1,8 @@
 function createWindow(name, width, height) {
     width = width || 300;
-    height = height+20 || 300;
+    //height = height+20 || 300;
     width += "px";
-    height += "px";
+    //height += "px";
 
     var w = document.createElement("div");
     w.className = "window";
@@ -11,7 +11,6 @@ function createWindow(name, width, height) {
     w.appendChild(header);
     dragElement(w);
     w.style.width = width;
-    w.style.height = height;
     document.body.appendChild(w);
 
     var red = document.createElement("div");
