@@ -29,9 +29,8 @@ function createWindow(name, width, height) {
     header.appendChild(content);
 
     var frame = document.createElement("iframe");
-    //frame.src = "/"+name+".html";
+    frame.src = "/"+name+".html";
     name.replace(" ", "%20");
-    frame.src = "file:///C:/Users/Quewon/Desktop/site/" + name + ".html";
     if (name.includes("https://")) {
         frame.src = name;
     } else if (name.includes("/")) {
