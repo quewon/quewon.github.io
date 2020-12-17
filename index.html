@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 	<head>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
+		<title>my site</title>
 
+		<style>
+			#container {
+				font-family: serif;
+				position: absolute;
+				height: 50%;
+				width: 50%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+
+			a {
+				text-decoration: none;
+			}
+			a:hover {
+				background-color: yellow;
+			}
+
+			.inf {
+				overflow: hidden;
+				transition: all .5s ease-in-out;
+				height: 0;
+			}
+			.inf:target {
+				height: auto;
+			}
+			#music:target {
+				height: 3em;
+			}
+			#games:target {
+				height: 3em;
+			}
+			#prototype:target {
+				height: 6em;
+			}
+			#contact:target {
+				height: 3em;
+			}
+
+			a[target="_blank"]::after {
+			  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+			  margin: 0 3px 0 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			hi this is my site<br />
+			<br />
+			here are some links<br />
+			<ul>
+				<li><a href="#music">music</a></li>
+				<div class="inf" id="music">
+					<ul>
+						<li><a href="https://quewon.bandcamp.com/" target="_blank">my album (bandcamp)</a></li>
+						<li><a href="https://www.youtube.com/channel/UCE5He-8WmOMF-IsaOtWoA2g" target="_blank">song demos (youtube)</a></li>
+					</ul>
+				</div>
+				<li><a href="#games">games</a></li>
+				<div class="inf" id="games">
+					<ul>
+						<li><a href="/whales%20and%20broken%20hearts.html" target="_blank">🐋💔</a><br /></li>
+						<li><a href="https://frogmanbard.itch.io/" target="_blank">itch.io</a></li>
+					</ul>
+				</div>
+				<li><a href="#prototype">prototype shop</a></li>
+				<div class="inf" id="prototype">
+					<ul>
+						<li><a href="/haebaragi" target="_blank">🌻🌻🌻</a></li>
+						<li><a href="/necromancy_club" target="_blank">necromancy.club</a></li>
+						<li><a href="/warden" target="_blank">warden</a></li>
+						<li><a href="/oxhi" target="_blank">oxhi</a></li>
+						<li><a href="/garden-2.1" target="_blank">garden</a></li>
+					</ul>
+				</div>
+				<li><a href="#contact">contact me</a></li>
+				<div class="inf" id="contact">
+					@ <a href = "mailto: quewon.chin@gmail..com">my email</a><br />
+					or @<a href="https://twitter.com/quewon_" target="_blank">quewon_</a> on twitter
+				</div>
+			</ul>
+		</div>
 	</body>
-	<script src="script.js"></script>
-	<script>
-		createWindow("main");
-	</script>
 </html>
