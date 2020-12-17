@@ -6,9 +6,9 @@
 			#container {
 				font-family: serif;
 				position: absolute;
-				height: 50%;
-				width: 50%;
-				top: 50%;
+				height: fit-content;
+				width: fit-content;
+				top: 30%;
 				left: 50%;
 				transform: translate(-50%,-50%);
 			}
@@ -45,6 +45,26 @@
 			  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
 			  margin: 0 3px 0 5px;
 			}
+
+			@media only screen and (max-device-width: 480px) {
+				html {
+					font-size: 4em;
+				}
+
+				#container {
+					font-family: serif;
+					position: absolute;
+					height: fit-content;
+					width: fit-content;
+					top: 10%;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+
+				a[target="_blank"]::after {
+				  content: none;
+				  margin: 0 3px 0 5px;
+				}
 		</style>
 	</head>
 
