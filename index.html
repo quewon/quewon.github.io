@@ -7,10 +7,24 @@
 				font-family: serif;
 				position: absolute;
 				height: fit-content;
-				width: fit-content;
-				top: 30%;
+				top: 20%;
 				left: 50%;
-				transform: translate(-50%,-50%);
+				transform: translateX(-50%);
+			}
+
+			#main, #frame {
+				/* border: 1px solid black; */
+				padding: 1em;
+				overflow: hidden;
+			}
+
+			#main {
+				float: left;
+			}
+
+			#frame {
+				/*margin-left: 1em;*/
+				float: right;
 			}
 
 			a {
@@ -18,6 +32,7 @@
 			}
 			a:hover {
 				background-color: yellow;
+				cursor: pointer;
 			}
 
 			.inf {
@@ -35,10 +50,14 @@
 				height: 3em;
 			}
 			#prototype:target {
-				height: 6em;
+				height: 6.5em;
 			}
 			#contact:target {
 				height: 3em;
+			}
+
+			ul {
+				margin: 0;
 			}
 
 			a[target="_blank"]::after {
@@ -48,7 +67,7 @@
 
 			@media only screen and (max-device-width: 480px) {
 				html {
-					font-size: 4em;
+					font-size: 3em;
 				}
 
 				#container {
@@ -70,40 +89,66 @@
 
 	<body>
 		<div id="container">
-			hi this is my site<br />
-			<br />
-			here are some links<br />
-			<ul>
-				<li><a href="#music">music</a></li>
-				<div class="inf" id="music">
-					<ul>
-						<li><a href="https://quewon.bandcamp.com/" target="_blank">my album (bandcamp)</a></li>
-						<li><a href="https://www.youtube.com/channel/UCE5He-8WmOMF-IsaOtWoA2g" target="_blank">song demos (youtube)</a></li>
-					</ul>
-				</div>
-				<li><a href="#games">games</a></li>
-				<div class="inf" id="games">
-					<ul>
-						<li><a href="/whales%20and%20broken%20hearts.html" target="_blank">🐋💔</a><br /></li>
-						<li><a href="https://frogmanbard.itch.io/" target="_blank">itch.io</a></li>
-					</ul>
-				</div>
-				<li><a href="#prototype">prototype shop</a></li>
-				<div class="inf" id="prototype">
-					<ul>
-						<li><a href="/haebaragi" target="_blank">🌻🌻🌻</a></li>
-						<li><a href="/necromancy_club" target="_blank">necromancy.club</a></li>
-						<li><a href="/warden" target="_blank">warden</a></li>
-						<li><a href="/oxhi" target="_blank">oxhi</a></li>
-						<li><a href="/garden-2.1" target="_blank">garden</a></li>
-					</ul>
-				</div>
-				<li><a href="#contact">contact me</a></li>
-				<div class="inf" id="contact">
-					@ <a href = "mailto: quewon.chin@gmail..com">my email</a><br />
-					or @<a href="https://twitter.com/quewon_" target="_blank">quewon_</a> on twitter
-				</div>
-			</ul>
+			<div id="main">
+				hi this is my site<br />
+				<br />
+				here are some links<br />
+				<br />
+				<ul>
+					<li><a onclick="toggle(this, 'music')">music</a></li>
+					<div class="inf" id="music">
+						<ul>
+							<li><a href="https://quewon.bandcamp.com/" target="_blank">my album (bandcamp)</a></li>
+							<li><a href="https://www.youtube.com/channel/UCE5He-8WmOMF-IsaOtWoA2g" target="_blank">song demos (youtube)</a></li>
+						</ul>
+					</div>
+					<li><a onclick="toggle(this, 'games')">games</a></li>
+					<div class="inf" id="games">
+						<ul>
+							<li><a href="/whales%20and%20broken%20hearts.html" target="_blank">🐋💔</a><br /></li>
+							<li><a href="https://frogmanbard.itch.io/" target="_blank">itch.io</a></li>
+						</ul>
+					</div>
+					<li><a onclick="toggle(this, 'prototype')">prototype shop</a></li>
+					<div class="inf" id="prototype">
+						<ul>
+							<li><a href="/haebaragi" target="_blank">🌻🌻🌻</a></li>
+							<li><a href="/necromancy_club" target="_blank">necromancy.club</a></li>
+							<li><a href="/warden" target="_blank">warden</a></li>
+							<li><a href="/oxhi" target="_blank">oxhi</a></li>
+							<li><a href="/garden-2.1" target="_blank">garden</a></li>
+						</ul>
+					</div>
+					<li><a onclick="toggle(this, 'contact')">contact me</a></li>
+					<div class="inf" id="contact">
+						@ <a href = "mailto: quewon.chin@gmail..com">my email</a><br />
+						or @<a href="https://twitter.com/quewon_" target="_blank">quewon_</a> on twitter
+					</div>
+				</ul>
+			</div>
+
+			<div id="frame">
+			
+			</div>
 		</div>
 	</body>
+
+	<script>
+		function toggle(e, id) {
+			if (e.className=="off") {
+				e.className = "";
+				window.location.replace('index.html#');
+			} else {
+				e.className = "off";
+				window.location.replace('index.html#'+id);
+			}
+
+			let c = document.getElementsByClassName("off");
+			for (let i=0; i<c.length; i++) {
+				if (c[i] != e) {
+					c[i].className = "";
+				}
+			}
+		}
+	</script>
 </html>
