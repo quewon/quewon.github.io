@@ -1,30 +1,33 @@
 <!DOCTYPE html>
+	<meta charset="utf-8" content="">
 	<head>
 		<title>my site</title>
 
 		<style>
+			body {
+				margin: 0;
+			}
+
 			#container {
 				font-family: serif;
 				position: absolute;
 				height: fit-content;
-				top: 20%;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-
-			#main, #frame {
-				/* border: 1px solid black; */
-				padding: 1em;
-				overflow: hidden;
+				width: 100%;
 			}
 
 			#main {
 				float: left;
+				padding: 3em;
+				width: 40%;
+				box-sizing: border-box;
 			}
 
 			#frame {
 				/*margin-left: 1em;*/
 				float: right;
+				padding: 0;
+				height: 100%;
+				width: 60%;
 			}
 
 			a {
@@ -37,23 +40,11 @@
 
 			.inf {
 				overflow: hidden;
-				transition: all .5s ease-in-out;
-				height: 0;
+				transition: 0.5s ease-in;
+				max-height: 0;
 			}
-			.inf:target {
-				height: auto;
-			}
-			#music:target {
-				height: 3em;
-			}
-			#games:target {
-				height: 3em;
-			}
-			#prototype:target {
-				height: 8em;
-			}
-			#contact:target {
-				height: 3em;
+			.inf.target {
+				max-height: 10em;
 			}
 
 			ul {
@@ -65,52 +56,69 @@
 			  margin: 0 3px 0 5px;
 			}
 
+			@media only screen and (max-width: 800px) {
+				#main {
+					width: 100%;
+				}
+				#frame {
+					width: 100%;
+				}
+			}
+
 			@media only screen and (max-device-width: 480px) {
 				html {
-					font-size: 3em;
+					font-size: 20px;
 				}
+			}
 
-				#container {
-					font-family: serif;
-					position: absolute;
-					height: fit-content;
-					width: fit-content;
-					top: 10%;
-					left: 50%;
-					transform: translateX(-50%);
-				}
-
-				a[target="_blank"]::after {
-				  content: none;
-				  margin: 0 3px 0 5px;
-				}
+			i {
+				opacity: 0.75;
+			}
 		</style>
 	</head>
 
 	<body>
 		<div id="container">
 			<div id="main">
-				hi this is my site<br />
-				<br />
-				here are some links<br />
-				<br />
+				<div id="contact" style="float:right">
+					<i><a href = "mailto: quewon.chin@gmail..com">email</a> | <a href="https://frogmen.itch.io">itch.io</a> | <a href="https://www.youtube.com/channel/UCE5He-8WmOMF-IsaOtWoA2g">yt</a> | <a href="https://twitter.com/quewon_">twitter</a></i>
+				</div><br>
+				<br>
+				hi this is my site<br>
+				<br>
+				here are some links<br>
+				<br>
 				<ul>
-					<li><a onclick="toggle(this, 'music')">music</a></li>
+					<li><a onclick="toggle('music')">music</a></li>
 					<div class="inf" id="music">
 						<ul>
-							<li><a href="https://quewon.bandcamp.com/" target="_blank">my album (bandcamp)</a></li>
-							<li><a href="https://www.youtube.com/channel/UCE5He-8WmOMF-IsaOtWoA2g" target="_blank">song demos (youtube)</a></li>
+							<li><a href="https://www.youtube.com/channel/UCE5He-8WmOMF-IsaOtWoA2g" target="_blank">demos + covers (youtube)</a></li>
+							<li><a href="https://quewon.bandcamp.com/" target="_blank">game jam jams + eps (bandcamp)</a></li>
+							<li><a href="https://soundcloud.com/soregold" target="_blank">questionable demos (soundcloud)</a></li>
 						</ul>
+						<br>
 					</div>
-					<li><a onclick="toggle(this, 'games')">games</a></li>
+
+					<li><a onclick="toggle('games')">games</a></li>
 					<div class="inf" id="games">
 						<ul>
-							<li><a href="/whales%20and%20broken%20hearts.html" target="_blank">🐋💔</a><br /></li>
-							<li><a href="https://frogmanbard.itch.io/" target="_blank">itch.io</a></li>
+							<li><a href="https://quewon.github.io/uni-project1/index.html" target="_blank">four pages about robots</a></li>
+							<li>
+								jam games
+								<ul>
+									<li><a href="/sub" target="_blank">the substitute</a></li>
+									<li><a href="/kid" target="_blank">kidgame</a></li>
+									<li><a href="/love-under-the-robot-junkyard" target="_blank">love under the robot junkyard</a></li>
+								</ul>
+							</li>
+							<li><a href="whales%20and%20broken%20hearts.html" target="_blank">🐋💔</a><br /></li>
+							<br>
 						</ul>
 					</div>
-					<li><a onclick="toggle(this, 'prototype')">prototype shop</a></li>
+
+					<li><a onclick="toggle('prototype')">prototype shop</a></li>
 					<div class="inf" id="prototype">
+						<i>warning: unfinished prototypes, abandoned repos</i>
 						<ul>
 							<li><a href="/ghost-king" target="_blank">ghost club blues</a></li>
 							<li><a href="/haebaragi" target="_blank">🌻🌻🌻</a></li>
@@ -118,38 +126,34 @@
 							<li><a href="/warden" target="_blank">warden</a></li>
 							<li><a href="/oxhi" target="_blank">oxhi</a></li>
 							<li><a href="/garden-2.1" target="_blank">garden</a></li>
+							<br>
 						</ul>
 					</div>
-					<li><a onclick="toggle(this, 'contact')">contact me</a></li>
-					<div class="inf" id="contact">
-						@ <a href = "mailto: quewon.chin@gmail..com">my email</a><br />
-						or @<a href="https://twitter.com/quewon_" target="_blank">quewon_</a> on twitter
-					</div>
 				</ul>
+				<br>
 			</div>
 
-			<div id="frame">
-			
-			</div>
+			<iframe src="https://quewon.github.io/uni-project1/art.html" id="frame" frameBorder="0"></iframe>
 		</div>
 	</body>
 
 	<script>
-		function toggle(e, id) {
-			if (e.className=="off") {
-				e.className = "";
-				window.location.replace('index.html#');
-			} else {
-				e.className = "off";
-				window.location.replace('index.html#'+id);
+		function toggle(id) {
+			let e = document.getElementById(id);
+			if (e.classList.contains("target")) {
+				e.classList.remove("target");
+				return
 			}
 
-			let c = document.getElementsByClassName("off");
-			for (let i=0; i<c.length; i++) {
-				if (c[i] != e) {
-					c[i].className = "";
-				}
-			}
+			Array.from(document.querySelectorAll(".inf")).forEach((el) => el.classList.remove("target"));
+			e.classList.add("target");
+
+			// let c = document.getElementsByClassName("target");
+			// for (let i=0; i<c.length; i++) {
+			// 	if (c[i] != e) {
+			// 		c[i].className = "";
+			// 	}
+			// }
 		}
 	</script>
 </html>
