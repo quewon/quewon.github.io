@@ -1,0 +1,40 @@
+html {
+  --links: #7585bf;
+  --bg: white;
+  --text: black;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg)
+}
+
+a {
+  color: var(--links);
+  text-decoration: none;
+}
+a:hover {
+  background-color: var(--links);
+  color: var(--bg);
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+}
+
+a[target="_blank"]::after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  padding-left: 5px;
+  background-color: var(--bg) !important;
+}
+
+i {
+  opacity: 0.75;
+}
+
+@media only screen and (max-device-width: 480px) {
+  html {
+    font-size: 40px;
+  }
+}

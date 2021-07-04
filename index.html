@@ -1,131 +1,95 @@
 <!DOCTYPE html>
 	<meta charset="utf-8" content="">
 	<head>
-		<title>my site</title>
-
+		<title>q1</title>
+		<link rel="stylesheet" href="master.css">
 		<style>
-			body {
-				margin: 0;
-			}
+		#container {
+			font-family: serif;
+			position: absolute;
+			height: fit-content;
+			width: 100%;
+		}
 
-			#container {
-				font-family: serif;
-				position: absolute;
-				height: fit-content;
-				width: 100%;
+		#main {
+			float: left;
+			padding: 3em;
+			width: 40%;
+			box-sizing: border-box;
+		}
 
-				--links: #7585bf;
-				--bg: white;
-				--text: black;
-			}
+		#frame {
+			/*margin-left: 1em;*/
+			float: right;
+			padding: 0;
+			height: 100vh;
+			width: 60%;
+		}
 
+		.inf {
+			overflow: hidden;
+			transition: 0.5s ease-in;
+			max-height: 0;
+		}
+		.inf.target {
+			max-height: 10em;
+		}
+
+		#tag {
+			position: absolute;
+			top: 2em;
+			right: 0;
+			padding: 1em;
+			background-color: var(--bg);
+			opacity: 0.9;
+			font-style: italic;
+		}
+
+		@media only screen and (max-width: 800px) {
 			#main {
-				float: left;
-				padding: 3em;
-				width: 40%;
-				box-sizing: border-box;
+				width: 100%;
+				height: fit-content;
 			}
-
 			#frame {
-				/*margin-left: 1em;*/
-				float: right;
-				padding: 0;
-				height: 100vh;
-				width: 60%;
+				width: 100%;
 			}
-
-			a {
-				color: var(--links);
-				text-decoration: none;
+			#container {
+				padding-bottom: 5em;
 			}
-			a:hover {
-				background-color: var(--links);
-				color: var(--bg);
-				cursor: pointer;
-			}
-
-			.inf {
-				overflow: hidden;
-				transition: 0.5s ease-in;
-				max-height: 0;
-			}
-			.inf.target {
-				max-height: 10em;
-			}
-
-			ul {
-				margin: 0;
-			}
-
-			/* a[target="_blank"]::after {
-			  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
-			  padding-left: 5px;
-				background-color: var(--bg) !important;
-			} */
-
 			#tag {
 				position: absolute;
-				top: 2em;
-				right: 0;
-				padding: 1em;
-				background-color: var(--bg);
-				opacity: 0.9;
-				font-style: italic;
+				top: auto;
+				bottom: 0;
+				padding: 2em;
+				width: 100%;
+				text-align: center;
+				box-sizing: border-box;
+				height: 5em;
 			}
+		}
 
-			@media only screen and (max-width: 800px) {
-				#main {
-					width: 100%;
-					height: fit-content;
-				}
-				#frame {
-					width: 100%;
-				}
-				#container {
-					padding-bottom: 5em;
-				}
-				#tag {
-					position: absolute;
-					top: auto;
-					bottom: 0;
-					padding: 2em;
-					width: 100%;
-					text-align: center;
-					box-sizing: border-box;
-					height: 5em;
-				}
+		@media only screen and (max-device-width: 480px) {
+			#main {
+				width: 100%;
 			}
-
-			@media only screen and (max-device-width: 480px) {
-				html {
-					font-size: 40px;
-				}
-
-				#main {
-					width: 100%;
-				}
-				#frame {
-					width: 100%;
-					height: 60vh;
-				}
-				#container {
-					padding-bottom: 5em;
-				}
-				#tag {
-					position: absolute;
-					top: auto;
-					bottom: 0;
-					padding: 2em;
-					width: 100vw;
-					text-align: center;
-					box-sizing: border-box;
-					height: 5em;
-				}
+			#frame {
+				width: 100%;
+				height: 60vh;
 			}
-
-			i {
-				opacity: 0.75;
+			#container {
+				padding-bottom: 5em;
 			}
+			#tag {
+				position: absolute;
+				top: auto;
+				bottom: 0;
+				padding: 2em;
+				width: 100vw;
+				text-align: center;
+				box-sizing: border-box;
+				height: 5em;
+			}
+		}
 		</style>
 	</head>
 
@@ -133,7 +97,7 @@
 		<div id="container">
 			<div id="main">
 				<div id="contact" style="float:right">
-					<i><a href = "mailto: quewon.chin@gmail..com" target="_blank">email</a> | <a href="https://frogmen.itch.io" target="_blank">itch.io</a> | <a href="https://www.youtube.com/channel/UCE5He-8WmOMF-IsaOtWoA2g" target="_blank">youtube</a> | <a href="https://twitter.com/quewon_" target="_blank">twitter</a></i>
+					<i><a href = "mailto: quewon.chin@gmail..com">email</a> | <a href="https://frogmen.itch.io">itch.io</a> | <a href="https://www.youtube.com/channel/UCE5He-8WmOMF-IsaOtWoA2g">youtube</a> | <a href="https://twitter.com/quewon_">twitter</a></i>
 				</div><br>
 				<br>
 				hi this is my site<br>
@@ -172,6 +136,7 @@
 					<div class="inf" id="prototype">
 						<i>warning: unfinished prototypes, abandoned repos</i>
 						<ul>
+							<li><a href="/egoware" target="_blank">egoware</a></li>
 							<li><a href="/ghost-king" target="_blank">ghost club blues</a></li>
 							<li><a href="/haebaragi" target="_blank">🌻🌻🌻</a></li>
 							<li><a href="/necromancy_club" target="_blank">necromancy.club</a></li>
@@ -181,6 +146,8 @@
 							<br>
 						</ul>
 					</div>
+
+					<!-- <li><a href="logs/main.html">logs</a></li> -->
 				</ul>
 			</div>
 			<iframe src="https://quewon.github.io/uni-project1/art.html" id="frame" frameBorder="0"></iframe>
