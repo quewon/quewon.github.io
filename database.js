@@ -53,7 +53,7 @@ var links = [
     name: "thoughts about you",
     date: "2021/1/28",
     category: "music",
-    tooltip: "",
+    tooltip: "my first love song",
     link: "https://youtu.be/fy_C6yHbS9M",
   },
   {
@@ -61,6 +61,7 @@ var links = [
     date: "2021/8/26",
     category: "music",
     link: "https://youtu.be/0pfaYAG76mc",
+    tooltip: "birdman",
   },
   {
     name: "AFTER THE DAZZLE OF DAY",
@@ -225,7 +226,7 @@ var links = [
     link: "https://frogmen.itch.io/distant-blues"
   },
   {
-    name: "raccoon laundering",
+    name: "RACCOON LAUNDERING",
     date: "2022/1/25",
     category: "game",
     link: "https://frogmen.itch.io/raccoon-laundering"
@@ -267,10 +268,7 @@ var links = [
     name: "cat food",
     date: "2022/11/18",
     category: "game",
-    link: "/cat-food",
-    supplementary: {
-      "itch.io": "https://frogmen.itch.io/cat-food"
-    },
+    link: "https://frogmen.itch.io/cat-food",
     tooltip: "made for Sylvie's Jam",
   },
   {
