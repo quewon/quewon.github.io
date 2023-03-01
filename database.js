@@ -78,13 +78,14 @@ var links = [
     name: "doodles of thumbelina",
     date: "2022/3/17",
     category: "music",
-    link: "https://youtu.be/ouH_ZaQJ6tU"
+    link: "https://youtu.be/ouH_ZaQJ6tU",
+    tooltip: "a handful of whimsical fairytale tracks"
   },
   {
     name: "in my bed",
     date: "2022/4/23",
     category: "music",
-    link: "https://youtu.be/cJj0SwfckxU"
+    link: "https://youtu.be/cJj0SwfckxU",
   },
   {
     name: "voice memos from this underground paprika garden",
@@ -243,7 +244,8 @@ var links = [
     supplementary: {
       "Goel's original Tritris": "https://leognon.com/tritris/",
       "lexaloffle.com": "https://www.lexaloffle.com/bbs/?tid=48219"
-    }
+    },
+    tooltip: "remix of Goel's Tritris"
   },
   {
     name: "gilga (길가)",
