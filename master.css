@@ -30,9 +30,3 @@ ul {
   padding-left: 5px;
   background-color: var(--bg) !important;
 }*/
-
-@media only screen and (max-device-width: 480px) {
-  html {
-    font-size: 40px;
-  }
-}
