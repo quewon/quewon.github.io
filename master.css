@@ -29,10 +29,6 @@ ul {
   background-color: var(--bg) !important;
 }*/
 
-i {
-  opacity: 0.75;
-}
-
 @media only screen and (max-device-width: 480px) {
   html {
     font-size: 40px;

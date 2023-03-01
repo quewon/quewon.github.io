@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 	<meta charset="utf-8" content="">
 	<head>
-		<title>q1</title>
+		<title>q1's room</title>
 		<link rel="stylesheet" href="master.css">
 		<style>
 		#container {
-			font-family: serif;
+			font-family: 'Times New Roman', serif;
+			font-size: 11pt;
 			position: absolute;
 			height: fit-content;
 			width: 100%;
@@ -28,11 +29,7 @@
 
 		.inf {
 			overflow: hidden;
-			transition: 0.5s ease-in;
 			max-height: 0;
-		}
-		.inf.target {
-			max-height: 10em;
 		}
 
 		#tag {
@@ -90,6 +87,40 @@
 				height: 5em;
 			}
 		}
+
+		.date {
+			font-family: monospace;
+			font-size: 8pt;
+			flex-shrink: 0;   /* do not shrink - initial value: 1 */
+			flex-basis: 5rem;
+		}
+
+		ul {
+			padding-left: 0;
+		}
+
+		.category.open > a + ul.inf {
+			max-height: fit-content;
+			margin-bottom: 1rem;
+		}
+
+		.category::before {
+			display: inline-block;
+			content: "+ ";
+			width: 1rem;
+			flex-shrink: 0;
+		}
+		.category.open::before {
+			content: "– ";
+		}
+		.category > a {
+			padding-right: 2rem;
+		}
+
+		li {
+			display: flex;
+			margin-left: 0;
+		}
 		</style>
 	</head>
 
@@ -97,81 +128,85 @@
 		<div id="container">
 			<div id="main">
 				<div id="contact" style="float:right">
-					<i><a href = "mailto: quewon.chin@gmail..com">email</a> | <a href="https://frogmen.itch.io">itch.io</a> | <a href="https://www.youtube.com/channel/UCE5He-8WmOMF-IsaOtWoA2g">youtube</a> | <a href="https://twitter.com/quewon_">twitter</a></i>
+					<i><a href = "mailto: quewon.chin@gmail.com">email</a>,  <a href="https://frogmen.itch.io">itch.io</a>, <a href="https://www.youtube.com/channel/UCE5He-8WmOMF-IsaOtWoA2g">youtube</a>, <a href="https://twitter.com/quewon_">twitter</a>, <a href="https://soundcloud.com/soregold">sc</a>, <a href="https://cohost.org/quewon/">ch</a>...</i>
 				</div><br>
 				<br>
-				hi this is my site<br>
+				welcome to q1's bedroom :)<br>
+				proudly sporting 11pt Times New Roman & this vast white void<br>
 				<br>
-				here are some links<br>
-				<br>
-				<ul>
-					<li><a onclick="toggle('music')">music</a></li>
-					<div class="inf" id="music">
-						<ul>
-							<li><a href="https://www.youtube.com/channel/UCE5He-8WmOMF-IsaOtWoA2g" target="_blank">demos + covers (youtube)</a></li>
-							<li><a href="https://quewon.bandcamp.com/" target="_blank">game jam jams + eps (bandcamp)</a></li>
-							<li><a href="https://soundcloud.com/soregold" target="_blank">questionable demos (soundcloud)</a></li>
-						</ul>
-						<br>
-					</div>
-
-					<li><a onclick="toggle('games')">games</a></li>
-					<div class="inf" id="games">
-						<ul>
-							<li><a href="https://quewon.github.io/uni-project1/index.html" target="_blank">four pages about robots</a></li>
-							<li>
-								jam games
-								<ul>
-									<li><a href="/sub" target="_blank">the substitute</a></li>
-									<li><a href="/kid" target="_blank">kidgame</a></li>
-									<li><a href="/love-under-the-robot-junkyard" target="_blank">love under the robot junkyard</a></li>
-								</ul>
-							</li>
-							<li><a href="whales%20and%20broken%20hearts.html" target="_blank">🐋💔</a><br /></li>
-							<br>
-						</ul>
-					</div>
-
-					<li><a onclick="toggle('prototype')">prototype shop</a></li>
-					<div class="inf" id="prototype">
-						<i>warning: unfinished prototypes, abandoned repos</i>
-						<ul>
-							<li><a href="/egoware" target="_blank">egoware</a></li>
-							<li><a href="/ghost-king" target="_blank">ghost club blues</a></li>
-							<li><a href="/haebaragi" target="_blank">🌻🌻🌻</a></li>
-							<li><a href="/necromancy_club" target="_blank">necromancy.club</a></li>
-							<li><a href="/warden" target="_blank">warden</a></li>
-							<li><a href="/oxhi" target="_blank">oxhi</a></li>
-							<li><a href="/garden-2.1" target="_blank">garden</a></li>
-							<br>
-						</ul>
-					</div>
-
-					<!-- <li><a href="logs/main.html">logs</a></li> -->
-				</ul>
+				<ul id="list"></ul>
 			</div>
-			<iframe src="https://quewon.github.io/uni-project1/art.html" id="frame" frameBorder="0"></iframe>
-			<div id="tag">from my university assignment, <a href="/uni-project1/art.html" target="_blank">four pages about robots</a></div>
+			<iframe src="" id="frame" frameBorder="0"></iframe>
+			<div id="tag"></div>
 		</div>
 	</body>
 
+	<script type="text/javascript" src="database.js"></script>
 	<script>
-		function toggle(id) {
-			let e = document.getElementById(id);
-			if (e.classList.contains("target")) {
-				e.classList.remove("target");
-				return
+		const list = document.getElementById("list");
+		const featured_iframe = document.getElementById("frame");
+		const featured_tag = document.getElementById("tag");
+
+		// sort links by date
+		for (let link of links) {
+			let date = link.date.split("/");
+
+			let y = date[0];
+			let m = date[1] < 10 ? "0"+date[1] : date[1];
+			let d = date[2] < 10 ? "0"+date[2] : date[2];
+
+			link.date_value = Number(y+m+d);
+		}
+
+		links = links.sort(function(a,b){ return b.date_value - a.date_value; });
+
+		console.log(links);
+
+		// place links
+		var categories = {};
+		for (let link of links) {
+			let category = categories[link.category];
+			if (!category) {
+				let li = document.createElement("li");
+				let a = document.createElement("a");
+				a.textContent = link.category in category_names ? category_names[link.category] : link.category;
+				a.onclick = function() { this.parentNode.classList.toggle("open") };
+				li.appendChild(a);
+				list.appendChild(li);
+
+				let ul = document.createElement("ul");
+				ul.className = "inf";
+				li.appendChild(ul);
+				li.classList.add("category");
+
+				categories[link.category] = ul;
+				category = ul;
 			}
 
-			Array.from(document.querySelectorAll(".inf")).forEach((el) => el.classList.remove("target"));
-			e.classList.add("target");
+			let li = document.createElement("li");
 
-			// let c = document.getElementsByClassName("target");
-			// for (let i=0; i<c.length; i++) {
-			// 	if (c[i] != e) {
-			// 		c[i].className = "";
-			// 	}
-			// }
+			let html = "<span class='date'>"+link.date+"</span> <span><a href='"+link.link+"'>"+link.name+"</a>";
+
+			if ('with' in link) {
+				html += " (with ";
+				for (let i=0; i<link.with.length; i++) {
+					html += "<a target='_blank' href='"+collaborators[link.with[i]]+"'>"+link.with[i]+"</a>";
+					if (i < link.with.length - 1) {
+						html += " and ";
+					}
+				}
+
+				html += ")";
+			}
+			html += "</span>";
+			li.innerHTML = html;
+
+			category.appendChild(li);
+
+			if ('featured' in link) {
+				featured_iframe.src = link.link;
+				featured_tag.innerHTML = "<span class='date'>"+link.date+"</span>"+link.name;
+			}
 		}
 	</script>
 </html>
