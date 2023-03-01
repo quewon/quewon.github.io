@@ -31,7 +31,7 @@ var links = [
     name: "인공지능_꿈일기",
     date: "2021/12/17",
     category: "experiment",
-    link: "https://quewon.github.io/ai-blue/",
+    link: "/ai-blue/",
     tooltip: "assignment for a class about color",
   },
   {
@@ -93,50 +93,50 @@ var links = [
     name: "oxhi",
     date: "2020/2/4",
     category: "prototype",
-    link: "https://quewon.github.io/oxhi/"
+    link: "/oxhi/"
   },
   {
     name: "warden",
     date: "2021/8/31",
     category: "prototype",
-    link: "https://quewon.github.io/warden/"
+    link: "/warden/"
   },
   {
     name: "necromancy.club",
     date: "2020/8/16",
     category: "prototype",
-    link: "https://quewon.github.io/necromancy_club/"
+    link: "/necromancy_club/"
   },
   {
     name: "petri",
     date: "2021/7/21",
     category: "experiment",
-    link: "https://quewon.github.io/petri/",
+    link: "/petri/",
     tooltip: "based on Sebastian Lague's video on slime mold simulations",
   },
   {
     name: "ur stepping on my toast",
     date: "2021/7/13",
     category: "experiment",
-    link: "https://quewon.github.io/subway/"
+    link: "/subway/"
   },
   {
     name: "abandoned alchemy game",
     date: "2021/8/9",
     category: "prototype",
-    link: "https://quewon.github.io/mor/"
+    link: "/mor/"
   },
   {
     name: "sunflower emoji",
     date: "2020/11/16",
     category: "experiment",
-    link: "https://quewon.github.io/haebaragi/"
+    link: "/haebaragi/"
   },
   {
     name: "ascii-tilt",
     date: "2023/2/25",
     category: "experiment",
-    link: "https://quewon.github.io/ascii-tilt/"
+    link: "/ascii-tilt/"
   },
   {
     name: "drive",
@@ -156,7 +156,7 @@ var links = [
     name: "whales and broken hearts",
     date: "2020/11/18",
     category: "game",
-    link: "https://quewon.github.io/whales%20and%20broken%20hearts",
+    link: "/whales%20and%20broken%20hearts",
     supplementary: {
       "itch.io": "https://frogmen.itch.io/whales-and-broken-hearts"
     }
@@ -165,7 +165,7 @@ var links = [
     name: "love under the robot junkyard",
     date: "2021/4/25",
     category: "game",
-    link: "https://quewon.github.io/love-under-the-robot-junkyard/",
+    link: "/love-under-the-robot-junkyard/",
     supplementary: {
       "itch.io": "https://frogmen.itch.io/love-under-the-robot-junkyard",
       "ldjam.com": "https://ldjam.com/events/ludum-dare/48/love-under-the-robot-junkyard",
@@ -177,7 +177,7 @@ var links = [
     name: "kidgame",
     date: "2021/5/23",
     category: "game",
-    link: "https://quewon.github.io/kid/",
+    link: "/kid/",
     supplementary: {
       "itch.io": "https://frogmen.itch.io/kidgame"
     },
@@ -187,7 +187,7 @@ var links = [
     name: "the substitute",
     date: "2021/6/13",
     category: "game",
-    link: "https://quewon.github.io/sub/",
+    link: "/sub/",
     supplementary: {
       "itch.io": "https://frogmen.itch.io/the-substitute",
       "soundtrack": "https://quewon.bandcamp.com/track/the-sub"
