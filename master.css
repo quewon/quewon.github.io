@@ -51,7 +51,7 @@ ul {
 
 @media only screen and (max-device-width: 480px) {
   html {
-    --font-size: 15pt;
+    --font-size: 30pt;
   }
 
   li {
@@ -64,6 +64,8 @@ ul {
 
   #main {
     padding: 3rem;
+    width: 100%;
+    height: fit-content;
   }
 
   .date {

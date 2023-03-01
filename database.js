@@ -280,10 +280,3 @@ var links = [
     link: "https://frogmen.itch.io/photograph-of-the-sun"
   },
 ];
-
-const appreciation = [
-  {
-    name: "",
-    link: "",
-  }
-];
