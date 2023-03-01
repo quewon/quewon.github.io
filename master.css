@@ -6,7 +6,9 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--bg)
+  background-color: var(--bg);
+  font-family: 'Times New Roman', serif;
+  font-size: 11pt;
 }
 
 a {

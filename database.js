@@ -18,7 +18,8 @@ var links = [
     link: "https://github.com/quewon/deerdesk",
     supplementary: {
       "soundtrack": "https://quewon.bandcamp.com/album/deerdesk"
-    }
+    },
+    tooltip: "a simple 3d game!! with scoreboards!! that i hosted for my school's two-day new media festival",
   },
   {
     name: "glasses and time anxiety",
@@ -30,7 +31,8 @@ var links = [
     name: "인공지능_꿈일기",
     date: "2021/12/17",
     category: "experiment",
-    link: "https://quewon.github.io/ai-blue/"
+    link: "https://quewon.github.io/ai-blue/",
+    tooltip: "assignment for a class about color",
   },
   {
     name: "thoughts about you",
@@ -50,6 +52,7 @@ var links = [
     date: "2021/10/26",
     category: "video",
     link: "https://youtu.be/HZAlw9ky3uA",
+    tooltip: "made in after effects for school, based on a Walt Whitman poem i found in a book i'm fond of, 'The Aurora County All Stars'",
   },
   {
     name: "song from a dream",
@@ -82,7 +85,8 @@ var links = [
     link: "https://youtu.be/lKNOSNffSOI",
     supplementary: {
       "bandcamp": "https://quewon.bandcamp.com/album/flowertown"
-    }
+    },
+    tooltip: "4-track ep :)",
   },
 
   {
@@ -107,7 +111,8 @@ var links = [
     name: "petri",
     date: "2021/7/21",
     category: "experiment",
-    link: "https://quewon.github.io/petri/"
+    link: "https://quewon.github.io/petri/",
+    tooltip: "based on Sebastian Lague's video on slime mold simulations",
   },
   {
     name: "ur stepping on my toast",
@@ -139,6 +144,7 @@ var links = [
     category: "game",
     link: "http://quewon.github.io/drive",
     featured: true,
+    tooltip: "made for a 3 hour game jam (i took a day and a half)",
   },
   {
     name: "ghost club blues",
@@ -164,7 +170,8 @@ var links = [
       "itch.io": "https://frogmen.itch.io/love-under-the-robot-junkyard",
       "ldjam.com": "https://ldjam.com/events/ludum-dare/48/love-under-the-robot-junkyard",
       "soundtrack": "https://quewon.bandcamp.com/track/love-under-the-robot-junkyard"
-    }
+    },
+    tooltip: "made in 48 hours for ludum dare",
   },
   {
     name: "kidgame",
@@ -173,7 +180,8 @@ var links = [
     link: "https://quewon.github.io/kid/",
     supplementary: {
       "itch.io": "https://frogmen.itch.io/kidgame"
-    }
+    },
+    tooltip: "made for pancelor's Memory Jam"
   },
   {
     name: "the substitute",
@@ -184,7 +192,8 @@ var links = [
       "itch.io": "https://frogmen.itch.io/the-substitute",
       "soundtrack": "https://quewon.bandcamp.com/track/the-sub"
     },
-    with: ["kev"]
+    with: ["kev"],
+    tooltip: "made in 48 hours for the gmtk game jam",
   },
   {
     name: "egoware",
@@ -231,7 +240,8 @@ var links = [
     with: ["Corey Hardt"],
     supplementary: {
       "soundtrack": "https://quewon.bandcamp.com/track/gilga"
-    }
+    },
+    tooltip: "made in 48 hours for the gmtk game jam",
   },
   {
     name: "nonexistence",
@@ -246,7 +256,8 @@ var links = [
     link: "http://quewon.github.io/cat-food",
     supplementary: {
       "itch.io": "https://frogmen.itch.io/cat-food"
-    }
+    },
+    tooltip: "made for Sylvie's Jam",
   },
   {
     name: "photograph of the sun",
