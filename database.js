@@ -4,9 +4,7 @@ const bits = [
   `<h1>faq</h1>
         Q: what does faq stand for?<br>
         A: frequently asked quewons`,
-  `<div style="margin-top: var(--font-size); border: 1px solid var(--text); width: 100%; padding: 1rem; box-sizing: border-box;">please, don't turn off your adblock</div>`,
   `<h1><a onclick="feeling_lucky()">i'm feeling lucky!</a></h1>`,
-  `<h1>한글 버전이 없는 걸 용서해 주십쇼...</h1>`
 ];
 
 function feeling_lucky() {
