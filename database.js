@@ -142,7 +142,7 @@ var links = [
     name: "drive",
     date: "2023/2/28",
     category: "game",
-    link: "http://quewon.github.io/drive",
+    link: "/drive/",
     featured: true,
     tooltip: "made for a 3 hour game jam (i took a day and a half)",
   },
@@ -150,7 +150,7 @@ var links = [
     name: "ghost club blues",
     date: "2021/1/13",
     category: "prototype",
-    link: "http://quewon.github.io/ghost-king"
+    link: "/ghost-king/"
   },
   {
     name: "whales and broken hearts",
@@ -199,7 +199,7 @@ var links = [
     name: "egoware",
     date: "2021/9/7",
     category: "game",
-    link: "http://quewon.github.io/egoware",
+    link: "/egoware",
     supplementary: {
       "itch.io": "https://frogmen.itch.io/egoware"
     }
@@ -253,7 +253,7 @@ var links = [
     name: "cat food",
     date: "2022/11/18",
     category: "game",
-    link: "http://quewon.github.io/cat-food",
+    link: "/cat-food",
     supplementary: {
       "itch.io": "https://frogmen.itch.io/cat-food"
     },
