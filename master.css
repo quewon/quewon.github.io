@@ -72,7 +72,7 @@ ul {
     flex-basis: 0;
   }
   .date + span {
-    margin-bottom: 1.2rem;
+    margin-bottom: calc(var(--font-size) * 1.2);
   }
 
   #frame {
