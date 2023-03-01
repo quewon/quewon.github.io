@@ -103,7 +103,6 @@ var links = [
     },
     tooltip: "4-track ep :)",
   },
-
   {
     name: "oxhi",
     date: "2020/2/4",
@@ -280,4 +279,11 @@ var links = [
     category: "game",
     link: "https://frogmen.itch.io/photograph-of-the-sun"
   },
+];
+
+const appreciation = [
+  {
+    name: "",
+    link: "",
+  }
 ];
