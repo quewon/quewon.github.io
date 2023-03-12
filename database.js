@@ -11,11 +11,15 @@ function feeling_lucky() {
   window.location.href = links[links.length * Math.random() | 0].link;
 }
 
+// write categories here, even if the names aren't different
+// just so we can keep track of the categories :)
 const category_names = {
   "game": "games",
   "prototype": "prototype shop",
   "experiment": "experiments",
   "writing": "words",
+  "music": "music",
+  "video": "video",
 };
 
 const collaborators = {
@@ -24,6 +28,13 @@ const collaborators = {
 };
 
 var links = [
+  {
+    name: "doda",
+    date: "2023/3/12",
+    category: "prototype",
+    link: "/doda/",
+    tooltip: "wip file system rpg",
+  },
   {
     name: "deerdesk",
     date: "2021/12/9",
