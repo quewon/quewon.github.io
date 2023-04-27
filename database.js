@@ -4,12 +4,8 @@ const bits = [
   `<h1>faq</h1>
         Q: what does faq stand for?<br>
         A: frequently asked quewons`,
-  `<h1><a onclick="feeling_lucky()">i'm feeling lucky!</a></h1>`,
+  `<h1><a onclick="window.location.href = links[links.length * Math.random() | 0].link;">i'm feeling lucky!</a></h1>`,
 ];
-
-function feeling_lucky() {
-  window.location.href = links[links.length * Math.random() | 0].link;
-}
 
 // write categories here, even if the names aren't different
 // just so we can keep track of the categories :)
@@ -28,6 +24,13 @@ const collaborators = {
 };
 
 var links = [
+  {
+    name: "dancers on the field (petri 2)",
+    date: "2023/4/27",
+    category: "experiment",
+    link: "/petri-2/",
+    featured: true,
+  },
   {
     name: "doda",
     date: "2023/3/12",
@@ -168,7 +171,6 @@ var links = [
     date: "2023/2/28",
     category: "game",
     link: "/drive/",
-    featured: true,
     tooltip: "made for a 3 hour game jam (i took a day and a half)",
   },
   {
