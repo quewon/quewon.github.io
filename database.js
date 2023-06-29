@@ -29,6 +29,13 @@ const collaborators = {
 
 var links = [
   {
+    name: "scrapbook",
+    date: "2023/6/29",
+    category: "experiment",
+    link: "/scrapbook/scrapbook/",
+    tooltip: "a virtual scrapbook to input and arrange images and text"
+  },
+  {
     name: "the letter",
     date: "2023/5/30",
     category: "writing",
