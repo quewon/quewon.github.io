@@ -29,6 +29,13 @@ const collaborators = {
 
 var links = [
   {
+    name: "live text recording studio",
+    date: "2023/7/20",
+    category: "experiment",
+    link: "/studio",
+    tooltip: "a tool for recording and manipulating typed conversations"
+  },
+  {
     name: "scrapbook",
     date: "2023/6/29",
     category: "experiment",
