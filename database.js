@@ -29,6 +29,12 @@ const collaborators = {
 
 var links = [
   {
+    name: "yellow",
+    date: "2021/7/19",
+    category: "prototype",
+    link: "/yellow"
+  },
+  {
     name: "live text recording studio",
     date: "2023/7/20",
     category: "experiment",
@@ -165,12 +171,6 @@ var links = [
     category: "experiment",
     link: "/petri/",
     tooltip: "based on Sebastian Lague's video on slime mold simulations",
-  },
-  {
-    name: "ur stepping on my toast",
-    date: "2021/7/13",
-    category: "experiment",
-    link: "/subway/"
   },
   {
     name: "abandoned alchemy game",
