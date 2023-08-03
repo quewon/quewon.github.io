@@ -33,7 +33,7 @@ var links = [
     date: "2023/8/4",
     category: "writing",
     link: "/slideshow",
-    tooltip: "an interactive zine about insomnia and infinity"
+    tooltip: "an interactive zine about collapsing infinities"
   },
   {
     name: "yellow",
