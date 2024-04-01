@@ -29,6 +29,16 @@ const collaborators = {
 
 var links = [
   {
+    name: "how to use the subway",
+    date: "2024/3/1",
+    category: "game",
+    link: "https://frogmen.itch.io/subway",
+    supplementary: {
+      "indiepocalypse #50": "https://pizzapranks.itch.io/indiepocalypse-50"
+    },
+    tooltip: "commissioned for Indiepocalypse #50"
+  },
+  {
     name: "how can i sleep when i know my dreams will hold me hostage?",
     date: "2023/8/4",
     category: "writing",
