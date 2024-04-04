@@ -1,6 +1,6 @@
 const bits = [
   `<h1>currently thinking about...</h1>
-        clones, goofy tile-based aliens, astigmatism, smartphone photographs and voice recordings, floating captions`,
+        clones, public transit, floating captions, typography in games`,
   `<h1>faq</h1>
         Q: what does faq stand for?<br>
         A: frequently asked quewons`,
