@@ -65,12 +65,6 @@ var links = [
     link: "/scrapbook/scrapbook/",
     tooltip: "a virtual scrapbook to input and arrange images and text"
   },
-  // {
-  //   name: "the letter",
-  //   date: "2023/5/30",
-  //   category: "writing",
-  //   link: "/the-letter",
-  // },
   {
     name: "dancers on the field (petri 2)",
     date: "2023/4/27",
