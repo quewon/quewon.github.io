@@ -11,7 +11,8 @@ body {
 
 a {
     text-decoration: none;
-    color: blue;
+    background: rgba(255, 255, 0, .3);
+    color: black;
 }
 
 img {
@@ -19,5 +20,15 @@ img {
 }
 
 summary {
+    border: 1px dotted transparent;
     cursor: pointer;
+}
+
+summary:focus {
+    outline: none;
+    border: 1px dotted black;
+}
+
+ul {
+    list-style-position: outside;
 }
