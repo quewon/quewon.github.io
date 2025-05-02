@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    margin: 1em;
+    font-family: monospace;
+    max-width: 40em;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+img {
+    width: 100%;
+}
+
+summary {
+    cursor: pointer;
+}
