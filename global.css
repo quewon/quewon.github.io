@@ -62,4 +62,7 @@ ul {
     a:visited {
         color: blue;
     }
+    a:hover {
+        text-decoration: none;
+    }
 }
