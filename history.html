@@ -6,36 +6,52 @@
     <title>q1's CV</title>
     <link rel="stylesheet" href="global.css">
     <style>
+        @media (min-width: 50em) {
+            body {
+                max-width: unset;
+            }
+
+            main {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1em;
+            }
+        }
+
+        @media print {
+            body {
+                font-size: 8.5pt;
+            }
+        }
+
         h2 {
             font-size: 1em;
             font-weight: normal;
         }
 
-        h2 + p {
-            margin-left: 2.5em;
+        h2 + ul {
+            padding-left: 2.5em;
         }
 
-        body {
-            max-width: unset;
+        ul {
+            list-style: "";
+            padding: 0;
         }
 
-        main {
-            display: grid;
-            grid-template-rows: auto;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 1em;
-        }
-
-        @media (max-width: 900px) {
-            main {
-                display: block;
-            }
+        li {
+            margin-bottom: .5em;
         }
     </style>
 </head>
 <body>
 
-    <p><a href="/"><- back to home</a></p>
+    <header>
+        <p><a href="/"><- back to home</a></p>
+    </header>
+
+    <p>
+        <b>Quewon "Q1" Chin</b>
+    </p>
 
     <p>
         <b>Born</b> Suwon, South Korea, 2002<br>
@@ -47,92 +63,137 @@
             <summary>Games</summary>
     
             <h2>2024</h2>
-    
-            <p>
-                <a href="https://frogmen.itch.io/subway">how to use the subway</a>
-            </p>
+
+            <ul>
+                <li><a href="https://frogmen.itch.io/subway">how to use the subway</a></li>
+            </ul>
     
             <h2>2023</h2>
-    
-            <p>
-                <a href="https://quewon.github.io/drive/">drive</a><br>
-                <a href="https://frogmen.itch.io/photograph-of-the-sun">photograph of the sun</a>
-            </p>
+
+            <ul>
+                <li><a href="https://quewon.github.io/drive/">drive</a></li>
+                <li><a href="https://frogmen.itch.io/photograph-of-the-sun">photograph of the sun</a></li>
+            </ul>
     
             <h2>2022</h2>
-    
-            <p>
-                <a href="https://frogmen.itch.io/cat-food">cat food</a><br>
-                <a href="https://frogmen.itch.io/nonexistence"></a>nonexistence<br>
-                <a href="https://frogmen.itch.io/gilga">gilga 길가</a>, with Corey Hardt<br>
-                <a href="https://frogmen.itch.io/tritris-orange">Tritris Orange</a><br>
-                <a href="https://frogmen.itch.io/raccoon-laundering">RACCOON LAUNDERING</a>
-            </p>
+            
+            <ul>
+                <li><a href="https://frogmen.itch.io/cat-food">cat food</a></li>
+                <li><a href="https://frogmen.itch.io/nonexistence">nonexistence</a></li>
+                <li><a href="https://frogmen.itch.io/gilga">gilga 길가</a>, with Corey Hardt</li>
+                <li><a href="https://frogmen.itch.io/tritris-orange">Tritris Orange</a></li>
+                <li><a href="https://frogmen.itch.io/raccoon-laundering">RACCOON LAUNDERING</a></li>
+            </ul>
     
             <h2>2021</h2>
     
-            <p>
-                deerdesk<br>
-                <a href="https://frogmen.itch.io/distant-blues">distant blues</a><br>
-                <a href="https://frogmen.itch.io/egoware">egoware</a><br>
-                <a href="https://frogmen.itch.io/the-substitute">the substitute</a>, with Kev<br>
-                <a href="https://frogmen.itch.io/kidgame">kidgame</a><br>
-                <a href="https://frogmen.itch.io/love-under-the-robot-junkyard">love under the robot junkyard</a>
-            </p>
+            <ul>
+                <li>deerdesk</li>
+                <li><a href="https://frogmen.itch.io/distant-blues">distant blues</a></li>
+                <li><a href="https://frogmen.itch.io/egoware">egoware</a></li>
+                <li><a href="https://frogmen.itch.io/the-substitute">the substitute</a>, with Kev</li>
+                <li><a href="https://frogmen.itch.io/kidgame">kidgame</a></li>
+                <li><a href="https://frogmen.itch.io/love-under-the-robot-junkyard">love under the robot junkyard</a></li>
+            </ul>
     
             <h2>2020</h2>
+            
+            <ul>
+                <li><a href="https://frogmen.itch.io/whales-and-broken-hearts">whales and broken hearts</a></li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Websites</summary>
     
-            <p>
-                <a href="https://frogmen.itch.io/whales-and-broken-hearts">whales and broken hearts</a>
-            </p>
+            <ul>
+                <li>
+                    <a href="https://aylas-wip-portfolio.netlify.app/">Gülşah Ayla Bayrak</a>, artist portfolio website<br>
+                    Development, design
+                </li>
+
+                <li>
+                    <a href="/projects/2024-untitled-social">untitled social</a>, an alternative social media platform<br>
+                    Development, design
+                </li>
+            
+                <li>
+                    <a href="https://kada-art.org/">Korea Art Directors Association (KADA) Homepage</a><br>
+                    Development, design
+                </li>
+            
+                <li>
+                    <a href="http://www.nkpt.com/">NKTech Power Cylinders</a>, catalogue website<br>
+                    Development
+                </li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Education</summary>
+
+            <ul>
+                <li>
+                    Dong-ah Institute of Media and Arts, 2024-2025<br>
+                    Bachelor of Arts in Media Contents Production
+                </li>
+
+                <li>
+                    Dong-ah Institute of Media and Arts, 2021–2024<br>
+                    Associate Degree of Arts in New Media Contents
+                </li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Exhibitions</summary>
+    
+            <ul>
+                <li><i>Play. Net : Zero-sum Game</i>, RnL Rosenlime Gallery, 2024</li>
+                <li>(주)첨단메모리시스템, MatMul Gallery, 2024</li>
+                <li>가치의 재생, Gyeonggi Art Center, 2023</li>
+                <li>뉴미디어 유니버스, Gyeonggi Art Center, 2022</li>
+                <li><i>Dear Deer</i>, Dong-ah Institute of Media and Arts, 2021</li>
+            </ul>
         </details>
     
         <details>
             <summary>Software</summary>
     
-            <p><a href="https://paradise-collab.itch.io/screensaver-collab-launcher">'dancers' screensaver</a>, 2023</p>
-            <p><a href="https://quewon.github.io/studio/">live text recording studio</a>, 2023</p>
+            <ul>
+                <li><a href="https://paradise-collab.itch.io/screensaver-collab-launcher">'dancers' screensaver</a>, 2023</li>
+                <li><a href="https://quewon.github.io/studio/">live text recording studio</a>, 2023</li>
+            </ul>
         </details>
     
         <details>
             <summary>Publications</summary>
     
-            <p><a href="https://pizzapranks.itch.io/indiepocalypse-50">Indiepocalypse #50</a>, 2024</p>
-            <p><a href="https://paradise-collab.itch.io">Paradise Digest</a>, Summer 2024</p>
-        </details>
-    
-        <details>
-            <summary>Exhibitions</summary>
-    
-            <p><i>Play. Net : Zero-sum Game</i>, RnL Rosenlime Gallery, 2024</p>
-            <p>(주)첨단메모리시스템, MatMul Gallery, 2024</p>
-            <p>가치의 재생, Gyeonggi Art Center, 2023</p>
-            <p>뉴미디어 유니버스, Gyeonggi Art Center, 2022</p>
-            <p><i>Dear Deer</i>, Dong-ah Institute of Media and Arts, 2021</p>
-        </details>
-    
-        <details>
-            <summary>Work</summary>
-    
-            <p>
-                <a href="https://aylas-wip-portfolio.netlify.app/"><i>Gülşah Ayla Bayrak</i> Artist Portfolio Website</a><br>
-                Development, design
-            </p>
-        
-            <p>
-                <a href="https://kada-art.org/"><i>Korea Art Directors Association (KADA)</i> Homepage</a><br>
-                Development, design
-            </p>
-        
-            <p>
-                <a href="http://www.nkpt.com/"><i>NKTech Power Cylinders</i> Catalogue Website</a><br>
-                Development
-            </p>
+            <ul>
+                <li><a href="https://pizzapranks.itch.io/indiepocalypse-50">Indiepocalypse #50</a>, 2024</li>
+                <li><a href="https://paradise-collab.itch.io">Paradise Digest</a>, Summer 2024</li>
+            </ul>
         </details>
     </main>
     
 </body>
 
 <script src="global.js"></script>
+<script>
+    window.onbeforeprint = () => {
+        for (let i=0; i<detailsList.length; i++) {
+            const element = detailsList[i];
+            element.dataset.openBeforePrint = element.open;
+            element.open = true;
+        }
+    }
+
+    window.onafterprint = () => {
+        for (let i=0; i<detailsList.length; i++) {
+            const element = detailsList[i];
+            element.open = element.dataset.openBeforePrint == "true" ? true : false;
+        }
+    }
+</script>
 
 </html>
