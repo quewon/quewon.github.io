@@ -11,6 +11,12 @@
     font-weight: 200 800;
 }
 
+:root {
+    --link-color: blue;
+    --link-visited: purple;
+    --link-active: red;
+}
+
 html, body {
     margin: 0;
 }
@@ -29,6 +35,13 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
+    color: var(--link-color);
+}
+a:visited {
+    color: var(--link-visited);
+}
+a:active {
+    color: var(--link-active);
 }
 a:hover {
     text-decoration: underline;
@@ -63,8 +76,8 @@ ul {
     summary:focus {
         border: none;
     }
-    a:visited {
-        color: blue;
+    a:visited, a:active {
+        color: var(--link-color);
     }
     a:hover {
         text-decoration: none;
