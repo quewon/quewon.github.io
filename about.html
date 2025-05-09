@@ -5,16 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>artist statement</title>
     <link rel="stylesheet" href="global.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        a[href='javascript:;'] {
+            background: yellow;
+        }
+
+        span {
+            animation: flash-yellow 200ms linear;
+        }
+        @keyframes flash-yellow {
+            0% {
+                background: rgba(255, 255, 0, .6);
+            }
+            100% {
+                background: transparent;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <p><a href="/"><- back to home</a></p>
 
-    <p>this page is a work in progress.</p>
-    <p>(who am i??)</p>
+    <p>
+        <b>Email</b> <a href="mailto:quewon.chin@gmail.com">quewon.chin@gmail.com</a><br>
+        <b>Bluesky</b> <a href="https://bsky.app/profile/quewon.bsky.social">@quewon.bsky.social</a>
+    </p>
+
+    <p>
+        The world is big. I work <a href="javascript:;" onclick="reveal(this, 'small')">small</a>.
+        <span id="small" class="hidden">
+            Like the restrained poetry of a <a href="https://music-archive.netlify.app">song</a>, in games I like simple interactions within <a href="javascript:;" onclick="reveal(this, 'contained-spaces')">contained spaces</a>.
+            <span id="contained-spaces" class="hidden">
+                I have a bit of an obsession with public transit systems and Tetris. Lately I've been playing chess.
+            </span>
+        </span>
+    </p>
+    
+    <p>
+        I keep my materials <a href="javascript:;" onclick="reveal(this, 'basic-materials')">basic</a>.
+        <span id="basic-materials" class="hidden">
+            I usually script in plain HTML and javascript. Sometimes I use light and specialized game tools like <a href="https://www.lexaloffle.com/pico-8.php">Pico-8</a>, <a href="https://twinery.org">Twine</a>, or <a href="https://bitsy.org">Bitsy</a>. I like the web, how it's easily shared and accessed by a variety of people on a variety of devices.
+        </span>
+    </p>
+
+    <p>
+        When I get bored of flat digital worlds, I play with <a href="/projects/2025-chessboard.html">3d printing</a> or knitting.
+    </p>
 
 </body>
 
 <script src="global.js"></script>
+<script>
+    function reveal(anchor, id) {
+        document.getElementById(id).classList.remove("hidden");
+        const fragment = document.createRange().createContextualFragment(anchor.innerHTML);
+        anchor.replaceWith(fragment);
+    }
+</script>
 
 </html>
