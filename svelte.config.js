@@ -2,6 +2,9 @@ import adapter from '@sveltejs/adapter-static';
 
 const config = {
 	kit: {
+		prerender: {
+			handleHttpError: 'warn'
+		},
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',

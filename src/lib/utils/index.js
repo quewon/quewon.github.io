@@ -48,3 +48,21 @@ export const parseMarkdownFile = (file, folder) => {
 		content
 	};
 }
+
+export const getPostsInFolderSorted = async (postPaths, folder) => {
+	const allPosts = await Promise.all(
+		Object.entries(postPaths).map(async ([path, resolver]) => {
+			const post = await resolver();
+			return {
+				path: path.slice('/src/content'.length, -'.md'.length),
+				post: parseMarkdownFile(post, folder)
+			}
+		})
+	)
+
+	const sortedPosts = allPosts.sort((a, b) => {
+		return new Date(b.post.metadata.date) - new Date(a.post.metadata.date);
+	});
+
+	return sortedPosts;
+}

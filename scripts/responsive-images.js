@@ -15,6 +15,7 @@ async function findImageFiles(dir) {
 
         return files
             .filter(dirent => dirent.isFile())
+            .filter(dirent => path.basename(dirent.parentPath) != outputFolder)
             .map(dirent => path.join(dirent.parentPath || '', dirent.name))
             .filter(file => file.match(/\.(jpg|jpeg|png|gif|webp|svg)$/i));
     } catch (error) {
@@ -31,8 +32,11 @@ async function processImages() {
     for (const file of files) {
         const imageDir = path.join(path.dirname(file), outputFolder);
         if (!fs.existsSync(imageDir)) fs.mkdirSync(imageDir);
-
         const baseName = path.parse(file).name;
+
+        // if image has already been processed, continue
+        if (fs.existsSync(path.join(imageDir, `${baseName}-${sizes[0]}.webp`)))
+            continue;
 
         await sharp(file)
             .webp({ quality: 100 })

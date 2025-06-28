@@ -1,4 +1,6 @@
-export const load = async ({ fetch }) => {
-	const response = await fetch('/text/api');
-	return { posts: await response.json() };
+import { getPostsInFolderSorted } from '$lib/utils';
+export const load = async () => {
+	return {
+		posts: await getPostsInFolderSorted(import.meta.glob(`/src/content/text/*.md`, { query: '?raw' }), 'text')
+	};
 };
