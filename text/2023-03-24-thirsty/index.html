@@ -47,4 +47,26 @@
     </main>
     
 </body>
+<script>
+    var detailsList;
+
+    window.onload = () => {
+        detailsList = document.querySelectorAll("details");
+        for (let i=0; i<detailsList.length; i++) {
+            const detail = detailsList[i];
+            const key = "detail-" + location.pathname.replaceAll("/", "-") + i;
+            
+            if (localStorage.getItem(key))
+                detail.setAttribute("open", true);
+
+            detail.addEventListener("toggle", function() {
+                if (this.open) {
+                    localStorage.setItem(key, true);
+                } else {
+                    localStorage.removeItem(key);
+                }
+            })
+        }
+    }
+</script>
 </html>
