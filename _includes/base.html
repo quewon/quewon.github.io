@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | default: "q1's website" }}</title>
+    <link rel="stylesheet" href="/static/base.css">
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+</head>
+<body>
+
+    <nav>
+        {% unless page.url == "/" %}
+            {% assign pages = page.url | split: "/" %}
+            {% if pages.size > 1 %}
+                <button onclick="history.back()">↩</button>
+            {% endif %}
+            {% for folder in pages %}
+                {% if forloop.first %}
+                    <a href="/">home</a>
+                {% elsif forloop.last %}
+                    {{ title | default: folder }}
+                {% else %}
+                    {% assign path = pages | slice: 0, forloop.index | join: '/' %}
+                    <a href="{{ path }}">{{ folder }}</a>
+                {% endif %}
+                {% unless forloop.last %}·{% endunless %}
+            {% endfor %}
+        {% endunless %}
+    </nav>
+
+    <main>
+        {{ content }}
+    </main>
+    
+</body>
+</html>

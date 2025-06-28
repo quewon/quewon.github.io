@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q1's CV</title>
+    <link rel="stylesheet" href="/static/base.css">
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+</head>
+<body>
+
+    <nav>
+        
+            
+            
+                <button onclick="history.back()">↩</button>
+            
+            
+                
+                    <a href="/">home</a>
+                
+                ·
+            
+                
+                    q1's CV
+                
+                
+            
+        
+    </nav>
+
+    <main>
+        <script>
+    var detailsList;
+
+    window.onload = () => {
+        detailsList = document.querySelectorAll("details");
+    }
+
+    window.onbeforeprint = () => {
+        for (let i=0; i<detailsList.length; i++) {
+            const element = detailsList[i];
+            element.dataset.openBeforePrint = element.open;
+            element.open = true;
+        }
+    }
+    
+    window.onafterprint = () => {
+        for (let i=0; i<detailsList.length; i++) {
+            const element = detailsList[i];
+            element.open = element.dataset.openBeforePrint == "true" ? true : false;
+        }
+    }
+</script>
+<style>
+    @media (min-width: 50em), print {
+        body {
+            max-width: unset;
+        }
+        .three-column {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+        }
+    }
+
+    @media print {
+        body {
+            font-size: 8pt;
+        }
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    ul ul {
+        padding-left: 2.5em;
+    }
+
+    li {
+        margin-bottom: .5em;
+    }
+    li::before {
+        display: none;
+    }
+</style>
+<p><strong>Quewon &quot;Q1&quot; Chin</strong><br>
+Web &amp; Game Developer</p>
+<p><strong>Web</strong> <a href="/">quewon.github.io</a><br>
+<strong>Email</strong> <a href="mailto:quewon.chin@gmail.com">quewon.chin@gmail.com</a></p>
+<p><strong>Born</strong> Suwon, South Korea, 2002<br>
+<strong>Lives</strong> Paris, France</p>
+<div class="three-column">
+<details>
+    <summary>Games</summary>
+<ul>
+<li>2024
+<ul>
+<li><a href="https://frogmen.itch.io/subway" target="_blank" rel="noopener noreferrer">how to use the subway</a></li>
+</ul>
+</li>
+<li>2023
+<ul>
+<li><a href="https://quewon.github.io/drive/" target="_blank" rel="noopener noreferrer">drive</a></li>
+<li><a href="https://frogmen.itch.io/photograph-of-the-sun" target="_blank" rel="noopener noreferrer">photograph of the sun</a></li>
+</ul>
+</li>
+<li>2022
+<ul>
+<li><a href="https://frogmen.itch.io/cat-food" target="_blank" rel="noopener noreferrer">cat food</a></li>
+<li><a href="https://frogmen.itch.io/gilga" target="_blank" rel="noopener noreferrer">gilga 길가</a>, with Corey Hardt</li>
+<li><a href="https://frogmen.itch.io/tritris-orange" target="_blank" rel="noopener noreferrer">Tritris Orange</a></li>
+<li><a href="https://frogmen.itch.io/raccoon-laundering" target="_blank" rel="noopener noreferrer">RACCOON LAUNDERING</a></li>
+</ul>
+</li>
+<li>2021
+<ul>
+<li>deerdesk</li>
+<li><a href="https://frogmen.itch.io/distant-blues" target="_blank" rel="noopener noreferrer">distant blues</a></li>
+<li><a href="https://frogmen.itch.io/the-substitute" target="_blank" rel="noopener noreferrer">the substitute</a>, with Kev</li>
+<li><a href="https://frogmen.itch.io/kidgame" target="_blank" rel="noopener noreferrer">kidgame</a></li>
+<li><a href="https://frogmen.itch.io/love-under-the-robot-junkyard" target="_blank" rel="noopener noreferrer">love under the robot junkyard</a></li>
+</ul>
+</li>
+<li>2020
+<ul>
+<li><a href="https://frogmen.itch.io/whales-and-broken-hearts" target="_blank" rel="noopener noreferrer">whales and broken hearts</a></li>
+</ul>
+</li>
+</ul>
+</details>
+<details>
+    <summary>Selected Web Projects</summary>
+<ul>
+<li><a href="https://aylas-wip-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer">Gülşah Ayla Bayrak</a>, artist portfolio website<br>
+Development, design</li>
+<li><a href="/projects/2024-untitled-social">untitled social</a>, an alternative social media platform<br>
+Development, design</li>
+<li><a href="https://kada-art.org/" target="_blank" rel="noopener noreferrer">Korea Art Directors Association (KADA) Homepage</a><br>
+Development, design</li>
+<li><a href="/projects/2025-data-garden">Data Garden</a>, media art installation<br>
+Development</li>
+<li><a href="https://dima-newcon.github.io/2023/" target="_blank" rel="noopener noreferrer">가치의 재생</a>, exhibition website<br>
+Development</li>
+<li><a href="http://www.nkpt.com/" target="_blank" rel="noopener noreferrer">NKTech Power Cylinders</a>, catalogue website<br>
+Development</li>
+</ul>
+</details>
+<details>
+    <summary>Education</summary>
+<ul>
+<li>Dong-ah Institute of Media and Arts<br>
+B.A. in Media Contents Production, 2024-2025<br>
+A.A. in New Media Contents, 2021–2024</li>
+</ul>
+</details>
+<details>
+    <summary>Exhibitions</summary>
+<ul>
+<li><em>Play. Net : Zero-sum Game</em>, RnL Rosenlime Gallery, 2024</li>
+<li>(주)첨단메모리시스템, MatMul Gallery, 2024</li>
+<li>가치의 재생, Gyeonggi Art Center, 2023</li>
+<li>뉴미디어 유니버스, Gyeonggi Art Center, 2022</li>
+<li><em>Dear Deer</em>, Dong-ah Institute of Media and Arts, 2021</li>
+</ul>
+</details>
+<details>
+    <summary>Publications</summary>
+<ul>
+<li><a href="https://pizzapranks.itch.io/indiepocalypse-50" target="_blank" rel="noopener noreferrer">Indiepocalypse #50</a>, 2024</li>
+<li><a href="https://paradise-collab.itch.io" target="_blank" rel="noopener noreferrer">Paradise Digest</a>, Summer 2024</li>
+</ul>
+</details>
+</div>
+    </main>
+    
+</body>
+</html>
