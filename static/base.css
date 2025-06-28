@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --link-color: blue;
+    --link-visited: purple;
+    --link-active: red;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    margin: 1em;
+    font-size: 15px;
+    font-family: 'Atkinson', monospace, sans-serif;
+    max-width: 40em;
+    line-height: 1.4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    display: block;
+    background-image: url("/static/border.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    height: .5em;
+    width: 100%;
+    border: none;
+    image-rendering: pixelated;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+a:visited {
+    color: var(--link-visited);
+}
+a:active {
+    color: var(--link-active);
+}
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    border: 1px dotted black;
+    border-radius: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+button:hover {
+    border-style: solid;
+}
+button:active {
+    border-color: var(--link-active);
+    color: var(--link-active);
+}
+
+summary {
+    border: 1px dotted transparent;
+    cursor: pointer;
+}
+summary:focus {
+    outline: none;
+    border: 1px dotted black;
+}
+details > summary {
+    list-style-type: '→ ';
+}
+details[open] > summary {
+    list-style-type: '↓ ';
+}
+
+ul, ol {
+    list-style: none;
+}
+li::before {
+    content: '';
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    background-image: url("/static/list-icon-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    image-rendering: pixelated;
+}
+li:nth-child(3n + 1)::before {
+    background-image: url("/static/list-icon-2.png");
+}
+li:nth-child(3n + 2)::before {
+    background-image: url("/static/list-icon-3.png");
+}
+
+@media print {
+    body {
+        max-width: unset;
+    }
+    nav {
+        display: none;
+    }
+    summary:focus {
+        border: none;
+    }
+    a:visited, a:active {
+        color: var(--link-color);
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}
