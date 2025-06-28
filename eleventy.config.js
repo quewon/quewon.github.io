@@ -1,13 +1,9 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-import util from 'util';
 import md from 'markdown-it';
 import iterator from 'markdown-it-for-inline';
+import { compress } from 'eleventy-plugin-compress';
 
 export default function (config) {
-    config.addPassthroughCopy("./public/static/");
-    config.addWatchTarget("./public/static/");
-
-    config.addPlugin(eleventyImageTransformPlugin);
     config.setLibrary("md", md({
             html: true
         }).use(iterator, 'url_new_win', 'link_open', function (tokens, i) {
@@ -18,9 +14,13 @@ export default function (config) {
             }
         })
     )
+    
+    config.addPassthroughCopy("./public/static/");
+    config.addWatchTarget("./public/static/");
 
-    config.addFilter("log", (value) => {
-        return util.inspect(value);
+    config.addPlugin(eleventyImageTransformPlugin);
+    config.addPlugin(compress, {
+        algorithm: 'brotli'
     });
 
     return {
