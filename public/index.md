@@ -1,6 +1,6 @@
 ---
 layout: base.html
-title: hello
+title: q1's website
 ---
 
 **email** [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
