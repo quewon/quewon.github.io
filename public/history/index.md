@@ -4,20 +4,18 @@ title: q1's CV
 ---
 
 <script>
-    window.onbeforeprint = () => {
-        for (let i=0; i<detailsList.length; i++) {
-            const element = detailsList[i];
+    window.addEventListener("beforeprint", () => {
+        for (let element of document.querySelectorAll("details")) {
             element.dataset.openBeforePrint = element.open;
             element.open = true;
         }
-    }
+    })
     
-    window.onafterprint = () => {
-        for (let i=0; i<detailsList.length; i++) {
-            const element = detailsList[i];
+    window.addEventListener("afterprint", () => {
+        for (let element of document.querySelectorAll("details")) {
             element.open = element.dataset.openBeforePrint == "true" ? true : false;
         }
-    }
+    })
 </script>
 
 <style>
@@ -34,7 +32,7 @@ title: q1's CV
 
     @media print {
         body {
-            font-size: 8pt;
+            font-size: 9pt;
         }
     }
 
