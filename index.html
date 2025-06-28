@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>q1's website</title>
+    <title>hello</title>
     <link rel="stylesheet" href="/static/base.css">
     <link rel="icon" type="image/png" href="/static/favicon.png">
     <script src="/static/picturefill.min.js" async=""></script>
@@ -33,10 +33,8 @@
 </body>
 
 <script>
-    var detailsList;
-
-    window.onload = () => {
-        detailsList = document.querySelectorAll("details");
+    window.addEventListener("load", () => {
+        var detailsList = document.querySelectorAll("details");
         for (let i=0; i<detailsList.length; i++) {
             const detail = detailsList[i];
             const key = "detail-" + location.pathname.replaceAll("/", "-") + i;
@@ -52,6 +50,6 @@
                 }
             })
         }
-    }
+    })
 </script>
 </html>
