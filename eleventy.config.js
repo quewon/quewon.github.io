@@ -19,8 +19,8 @@ export default function (config) {
     config.addWatchTarget("./public/static/");
 
     config.addPlugin(eleventyImageTransformPlugin, {
-        formats: ["auto", "webp", "jpeg"],
-        widths: ["auto", 300, 600],
+        formats: ["webp", "jpeg"],
+        widths: [300, 600, 1800],
         htmlOptions: {
             imgAttributes: {
                 loading: "lazy",

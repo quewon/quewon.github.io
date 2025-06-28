@@ -3,10 +3,8 @@ layout: base.html
 title: hello
 ---
 
-**email** [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
-**bluesky** [@quewon.bsky.social](https://bsky.app/profile/quewon.bsky.social)
-
----
+email ... [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
+bluesky ... @[quewon.bsky.social](https://bsky.app/profile/quewon.bsky.social)
 
 hey, my name is
 

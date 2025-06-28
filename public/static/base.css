@@ -11,7 +11,9 @@ html, body {
 }
 
 body {
-    margin: 1em;
+    margin: auto;
+    margin-top: 1em;
+    padding: 0 1em;
     font-size: 14px;
     font-family: 'Atkinson', monospace, sans-serif;
     max-width: 40em;
@@ -36,6 +38,7 @@ hr {
     width: 100%;
     border: none;
     image-rendering: pixelated;
+    margin: 1em 0;
 }
 
 a {
@@ -84,6 +87,7 @@ details[open] > summary {
 }
 
 ul, ol {
+    padding-left: 0;
     list-style: none;
 }
 ul li::before {
@@ -91,6 +95,7 @@ ul li::before {
     display: inline-block;
     height: 1em;
     width: 1em;
+    margin-right: .25em;
     background-image: url("/static/list-icon-1.png");
     background-repeat: no-repeat;
     background-position: center;

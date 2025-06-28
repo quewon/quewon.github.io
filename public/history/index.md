@@ -45,9 +45,9 @@ title: q1's CV
     }
 
     li {
-        margin-bottom: .5em;
+        margin-bottom: 1em;
     }
-    li::before {
+    ul li::before {
         display: none;
     }
 </style>
@@ -55,33 +55,42 @@ title: q1's CV
 **Quewon "Q1" Chin**  
 Web & Game Developer
 
-**Web** [quewon.github.io](/)  
-**Email** [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)
+*Email*; [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
+*Web*; [quewon.github.io](/)
 
-**Born** Suwon, South Korea, 2002  
-**Lives** Paris, France
+*Born*; Suwon, South Korea, 2002  
+*Lives*; Paris, France
 
 <div class="three-column">
 <details>
     <summary>Games</summary>
 
 - 2024
+
     - [how to use the subway](https://frogmen.itch.io/subway)
+
 - 2023
+
     - [drive](https://quewon.github.io/drive/)
     - [photograph of the sun](https://frogmen.itch.io/photograph-of-the-sun)
+
 - 2022
+
     - [cat food](https://frogmen.itch.io/cat-food)
     - [gilga 길가](https://frogmen.itch.io/gilga), with Corey Hardt
     - [Tritris Orange](https://frogmen.itch.io/tritris-orange)
     - [RACCOON LAUNDERING](https://frogmen.itch.io/raccoon-laundering)
+
 - 2021
+
     - deerdesk
     - [distant blues](https://frogmen.itch.io/distant-blues)
     - [the substitute](https://frogmen.itch.io/the-substitute), with Kev
     - [kidgame](https://frogmen.itch.io/kidgame)
     - [love under the robot junkyard](https://frogmen.itch.io/love-under-the-robot-junkyard)
+
 - 2020
+
     - [whales and broken hearts](https://frogmen.itch.io/whales-and-broken-hearts)
 
 </details>
