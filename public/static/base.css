@@ -86,7 +86,7 @@ details[open] > summary {
 ul, ol {
     list-style: none;
 }
-li::before {
+ul li::before {
     content: '';
     display: inline-block;
     height: 1em;
@@ -97,10 +97,10 @@ li::before {
     background-size: contain;
     image-rendering: pixelated;
 }
-li:nth-child(3n + 1)::before {
+ul li:nth-child(3n + 1)::before {
     background-image: url("/static/list-icon-2.png");
 }
-li:nth-child(3n + 2)::before {
+ul li:nth-child(3n + 2)::before {
     background-image: url("/static/list-icon-3.png");
 }
 
