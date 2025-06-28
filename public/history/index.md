@@ -4,12 +4,6 @@ title: q1's CV
 ---
 
 <script>
-    var detailsList;
-
-    window.onload = () => {
-        detailsList = document.querySelectorAll("details");
-    }
-
     window.onbeforeprint = () => {
         for (let i=0; i<detailsList.length; i++) {
             const element = detailsList[i];
