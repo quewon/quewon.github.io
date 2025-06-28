@@ -18,7 +18,16 @@ export default function (config) {
     config.addPassthroughCopy("./public/static/");
     config.addWatchTarget("./public/static/");
 
-    config.addPlugin(eleventyImageTransformPlugin);
+    config.addPlugin(eleventyImageTransformPlugin, {
+        formats: ["auto", "webp", "jpeg"],
+        widths: ["auto", 300, 600],
+        htmlOptions: {
+            imgAttributes: {
+                loading: "lazy",
+                decoding: "async"
+            }
+        }
+    });
     config.addPlugin(compress, {
         algorithm: 'brotli'
     });
