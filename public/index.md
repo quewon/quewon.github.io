@@ -4,7 +4,8 @@ title: hello
 ---
 
 [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
-@ [quewon.bsky.social](https://bsky.app/profile/quewon.bsky.social)
+github.com/[quewon](https://github.com/quewon)  
+@ [quewon.bsky.social](https://bsky.app/profile/quewon.bsky.social)  
 
 <br>
 
