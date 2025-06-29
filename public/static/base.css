@@ -2,7 +2,7 @@
 
 :root {
     --link-color: blue;
-    --link-visited: purple;
+    --link-visited: blue;
     --link-active: red;
 }
 
@@ -11,9 +11,7 @@ html, body {
 }
 
 body {
-    margin: auto;
-    margin-top: 1em;
-    padding: 0 1em;
+    margin: 1.5em;
     font-size: 14px;
     font-family: 'Atkinson', monospace, sans-serif;
     max-width: 40em;
@@ -61,6 +59,7 @@ button {
     background: transparent;
     font-family: inherit;
     font-size: inherit;
+    color: inherit;
     cursor: pointer;
 }
 button:hover {
@@ -100,15 +99,18 @@ details[open] > summary::before {
 }
 
 ul, ol {
-    padding-left: 0;
+    padding-left: 1.5em;
     list-style: none;
+}
+ul li {
+    position: relative;
 }
 ul li::before {
     content: '';
-    display: inline-block;
+    position: absolute;
+    left: -1.25em;
     height: 1em;
     width: 1em;
-    margin-right: .25em;
     background-image: url("/static/list-icon-1.png");
     background-repeat: no-repeat;
     background-position: center;
