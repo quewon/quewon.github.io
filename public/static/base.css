@@ -94,7 +94,7 @@ a:active, button:active {
 a:hover, button:hover {
     text-decoration: underline;
 }
-a[target="_blank"]::after {
+a:not(:has(img))[target="_blank"]::after {
     content: " ";
     display: inline-block;
     vertical-align: middle;
