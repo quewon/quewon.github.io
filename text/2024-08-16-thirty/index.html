@@ -52,15 +52,19 @@
     window.addEventListener("load", () => {
         var detailsList = document.querySelectorAll("details");
         for (let i=0; i<detailsList.length; i++) {
-            const detail = detailsList[i];
+            const details = detailsList[i];
             const key = "detail-" + location.pathname.replaceAll("/", "-") + i;
+            const stored = localStorage.getItem(key);
 
-            console.log(key, localStorage.getItem(key));
+            if (stored) {
+                if (stored == "true") {
+                    details.setAttribute("open", true);
+                } else {
+                    details.removeAttribute("open");
+                }
+            }
 
-            if (localStorage.getItem(key))
-                detail.setAttribute("open", localStorage.getItem(key) == "true");
-
-            detail.addEventListener("toggle", function() {
+            details.addEventListener("toggle", function() {
                 if (this.open) {
                     localStorage.setItem(key, "true");
                 } else {
