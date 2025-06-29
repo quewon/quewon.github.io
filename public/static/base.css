@@ -72,13 +72,13 @@ img {
 hr {
     display: block;
     background-image: url("/static/border.png");
-    background-size: contain;
     background-repeat: repeat-x;
+    background-position: center;
     height: .5em;
     width: 100%;
     border: none;
     image-rendering: pixelated;
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 
 a, button {

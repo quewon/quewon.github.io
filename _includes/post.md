@@ -4,8 +4,8 @@ title: post
 ---
 
 {%- if source -%}
-originally posted on [{{ source-name }}]({{ source }})
-<hr>
+*originally posted on [{{ source-name }}]({{ source }})*  
+<br>
 {%- endif -%}
 
 <div class="post">
