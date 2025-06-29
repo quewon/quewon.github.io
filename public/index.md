@@ -11,7 +11,7 @@ github.com/[quewon](https://github.com/quewon)
 
 <a href="https://frogmen.itch.io/subway" target="_blank" rel="noopener noreferrer">
 
-![how to use the subway](https://img.itch.zone/aW1nLzE1MjI3MDcwLmpwZWc=/original/h0B3Hs.jpeg)
+![Cover for my subway simulation 'how to use the subway'.](https://img.itch.zone/aW1nLzE1MjI3MDcwLmpwZWc=/original/h0B3Hs.jpeg)
 
 </a>
 
@@ -38,6 +38,6 @@ i'm a multimedia artist and developer. sometimes i make [weird web games](https:
 
 <a href="https://frogmen.itch.io/photograph-of-the-sun" target="_blank" rel="noopener noreferrer">
 
-![photograph of the sun](https://img.itch.zone/aW1hZ2UvMTkxMzQ2NC8xMTI0NTA1My5wbmc=/original/dvUe%2B8.png)
+![Screenshot of my game 'photograph of the sun'. A small 3d solar system populated by simple geometric figures.](https://img.itch.zone/aW1hZ2UvMTkxMzQ2NC8xMTI0NTA1My5wbmc=/original/dvUe%2B8.png)
 
 </a>
