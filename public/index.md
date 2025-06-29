@@ -16,5 +16,5 @@ i'm a multimedia artist and developer. sometimes i make [weird web games](https:
 
 ---
 
-[quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
-@[quewon.bsky.social](https://bsky.app/profile/quewon.bsky.social) on bluesky
+@ [quewon.bsky.social](https://bsky.app/profile/quewon.bsky.social)  
+[quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)
