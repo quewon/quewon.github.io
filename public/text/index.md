@@ -1,6 +1,6 @@
 ---
 layout: index.md
-title: q1's writing
+title: text
 eleventyExcludeFromCollections: true
 ---
 
