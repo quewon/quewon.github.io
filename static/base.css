@@ -99,7 +99,7 @@ details[open] > summary::before {
 }
 
 ul, ol {
-    padding-left: 1.5em;
+    padding-left: 3em;
     list-style: none;
 }
 ul li {
@@ -108,7 +108,7 @@ ul li {
 ul li::before {
     content: '';
     position: absolute;
-    left: -1.25em;
+    left: -1.3em;
     height: 1em;
     width: 1em;
     background-image: url("/static/list-icon-1.png");
