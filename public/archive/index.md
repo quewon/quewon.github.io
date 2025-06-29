@@ -1,7 +1,6 @@
 ---
 layout: index.md
 title: archive
-eleventyExcludeFromCollections: true
 ---
 
 {% for post in collections.project reversed %} {{ post.date | date: "%Y" }}&nbsp; [{{ post.data.title }}](

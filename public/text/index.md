@@ -1,7 +1,6 @@
 ---
 layout: index.md
 title: text
-eleventyExcludeFromCollections: true
 ---
 
 [pots (short interactive fiction practice)](https://quewon.github.io/pots/)  
