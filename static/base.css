@@ -73,6 +73,18 @@ a:active {
 a:hover {
     text-decoration: underline;
 }
+a[target="_blank"]::after {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1em;
+    width: 1em;
+    background-image: url("/static/external-link.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    image-rendering: pixelated;
+}
 
 button {
     border: 1px dotted black;
@@ -160,5 +172,8 @@ ul li:nth-child(3n + 2)::before {
     }
     a:hover {
         text-decoration: none;
+    }
+    a[target="_blank"]::after {
+        display: none;
     }
 }
