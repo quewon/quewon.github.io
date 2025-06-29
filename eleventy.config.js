@@ -3,6 +3,9 @@ import md from 'markdown-it';
 import iterator from 'markdown-it-for-inline';
 
 export default function (config) {
+    config.addPassthroughCopy("./public/static/");
+    config.addWatchTarget("./public/static/");
+
     config.setLibrary("md", md({
             html: true
         }).use(iterator, 'figure_images', 'image', function (tokens, i) {
@@ -24,9 +27,6 @@ export default function (config) {
             }
         })
     )
-    
-    config.addPassthroughCopy("./public/static/");
-    config.addWatchTarget("./public/static/");
 
     config.addPlugin(eleventyImageTransformPlugin, {
         formats: ["webp", "jpeg"],
