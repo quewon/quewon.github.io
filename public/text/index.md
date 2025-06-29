@@ -3,7 +3,6 @@ layout: index.md
 title: text
 ---
 
-[pots (short interactive fiction practice)](https://quewon.github.io/pots/)  
 {% for post in collections.text reversed %} {{ post.date | date: "%Y.%m.%d" }}&nbsp; [{{ post.data.title }}](
     {%- if post.data.redirect -%}
         {{ post.data.redirect }}
