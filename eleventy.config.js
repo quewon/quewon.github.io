@@ -1,8 +1,6 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import md from 'markdown-it';
 import iterator from 'markdown-it-for-inline';
-import { compress } from 'eleventy-plugin-compress';
-import youtubeEmbed from 'eleventy-plugin-youtube-embed';
 
 export default function (config) {
     config.setLibrary("md", md({
@@ -39,15 +37,6 @@ export default function (config) {
                 decoding: "async"
             }
         }
-    });
-    config.addPlugin(youtubeEmbed, {
-        modestBranding: true,
-        lite: {
-            responsive: true
-        }
-    });
-    config.addPlugin(compress, {
-        algorithm: 'brotli'
     });
 
     return {
