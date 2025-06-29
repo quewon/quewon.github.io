@@ -38,7 +38,7 @@ hr {
     width: 100%;
     border: none;
     image-rendering: pixelated;
-    margin: 1em 0;
+    margin: 1.25em 0;
 }
 
 a {
@@ -79,11 +79,24 @@ summary:focus {
     outline: none;
     border: 1px dotted black;
 }
-details > summary {
-    list-style-type: '→ ';
+summary {
+    list-style-type: "";
 }
-details[open] > summary {
-    list-style-type: '↓ ';
+summary::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: .25em;
+    background-image: url("/static/details-closed.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    image-rendering: pixelated;
+}
+details[open] > summary::before {
+    background-image: url("/static/details-open.png");
 }
 
 ul, ol {
