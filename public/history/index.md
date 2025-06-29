@@ -19,6 +19,16 @@ title: q1's CV
 </script>
 
 <style>
+    .three-column, .three-column > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em .5em;
+    }
+
+    details {
+        height: fit-content;
+    }
+
     @media (min-width: 50em), print {
         body {
             max-width: unset;
@@ -26,7 +36,6 @@ title: q1's CV
         .three-column {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1em;
         }
     }
 
@@ -56,8 +65,10 @@ title: q1's CV
     }
 </style>
 
-**Quewon "Q1" Chin**  
-Web & Game Developer
+### QUEWON "Q1" CHIN
+#### WEB & GAME DEVELOPER
+
+<br>
 
 *Email*; [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
 *Web*; [quewon.github.io](/)
@@ -65,8 +76,10 @@ Web & Game Developer
 *Born*; Suwon, South Korea, 2002  
 *Lives*; Paris, France
 
+<br>
+
 <div class="three-column">
-<details>
+<details open>
     <summary>Games</summary>
 
 - 2024
@@ -99,7 +112,7 @@ Web & Game Developer
 
 </details>
 
-<details>
+<details open>
     <summary>Selected Web Projects</summary>
 
 - [Gülşah Ayla Bayrak](https://aylas-wip-portfolio.netlify.app/), artist portfolio website  
@@ -117,7 +130,9 @@ Web & Game Developer
 
 </details>
 
-<details>
+<div>
+
+<details open>
     <summary>Education</summary>
 
 - Dong-ah Institute of Media and Arts  
@@ -126,7 +141,7 @@ Web & Game Developer
 
 </details>
 
-<details>
+<details open>
     <summary>Exhibitions</summary>
 
 - *Play. Net : Zero-sum Game*, RnL Rosenlime Gallery, 2024
@@ -137,11 +152,13 @@ Web & Game Developer
 
 </details>
 
-<details>
+<details open>
     <summary>Publications</summary>
 
 - [Indiepocalypse #50](https://pizzapranks.itch.io/indiepocalypse-50), 2024
 - [Paradise Digest](https://paradise-collab.itch.io), Summer 2024
 
 </details>
+
+</div>
 </div>
