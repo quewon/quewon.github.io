@@ -44,6 +44,16 @@
     })
 </script>
 <style>
+    .three-column, .three-column > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em .5em;
+    }
+
+    details {
+        height: fit-content;
+    }
+
     @media (min-width: 50em), print {
         body {
             max-width: unset;
@@ -51,7 +61,6 @@
         .three-column {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1em;
         }
     }
 
@@ -80,14 +89,16 @@
         display: none;
     }
 </style>
-<p><strong>Quewon &quot;Q1&quot; Chin</strong><br>
-Web &amp; Game Developer</p>
+<h3>QUEWON &quot;Q1&quot; CHIN</h3>
+<h4>WEB &amp; GAME DEVELOPER</h4>
+<br>
 <p><em>Email</em>; <a href="mailto:quewon.chin@gmail.com">quewon.chin@gmail.com</a><br>
 <em>Web</em>; <a href="/">quewon.github.io</a></p>
 <p><em>Born</em>; Suwon, South Korea, 2002<br>
 <em>Lives</em>; Paris, France</p>
+<br>
 <div class="three-column">
-<details>
+<details open="">
     <summary>Games</summary>
 <ul>
 <li>
@@ -130,7 +141,7 @@ Web &amp; Game Developer</p>
 </li>
 </ul>
 </details>
-<details>
+<details open="">
     <summary>Selected Web Projects</summary>
 <ul>
 <li><a href="https://aylas-wip-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer">Gülşah Ayla Bayrak</a>, artist portfolio website<br>
@@ -147,7 +158,8 @@ Development</li>
 Development</li>
 </ul>
 </details>
-<details>
+<div>
+<details open="">
     <summary>Education</summary>
 <ul>
 <li>Dong-ah Institute of Media and Arts<br>
@@ -155,7 +167,7 @@ B.A. in Media Contents Production, 2024-2025<br>
 A.A. in New Media Contents, 2021–2024</li>
 </ul>
 </details>
-<details>
+<details open="">
     <summary>Exhibitions</summary>
 <ul>
 <li><em>Play. Net : Zero-sum Game</em>, RnL Rosenlime Gallery, 2024</li>
@@ -165,13 +177,14 @@ A.A. in New Media Contents, 2021–2024</li>
 <li><em>Dear Deer</em>, Dong-ah Institute of Media and Arts, 2021</li>
 </ul>
 </details>
-<details>
+<details open="">
     <summary>Publications</summary>
 <ul>
 <li><a href="https://pizzapranks.itch.io/indiepocalypse-50" target="_blank" rel="noopener noreferrer">Indiepocalypse #50</a>, 2024</li>
 <li><a href="https://paradise-collab.itch.io" target="_blank" rel="noopener noreferrer">Paradise Digest</a>, Summer 2024</li>
 </ul>
 </details>
+</div>
 </div>
     </main>
     
@@ -183,15 +196,17 @@ A.A. in New Media Contents, 2021–2024</li>
         for (let i=0; i<detailsList.length; i++) {
             const detail = detailsList[i];
             const key = "detail-" + location.pathname.replaceAll("/", "-") + i;
-            
+
+            console.log(key, localStorage.getItem(key));
+
             if (localStorage.getItem(key))
-                detail.setAttribute("open", true);
+                detail.setAttribute("open", localStorage.getItem(key) == "true");
 
             detail.addEventListener("toggle", function() {
                 if (this.open) {
-                    localStorage.setItem(key, true);
+                    localStorage.setItem(key, "true");
                 } else {
-                    localStorage.removeItem(key);
+                    localStorage.setItem(key, "false");
                 }
             })
         }

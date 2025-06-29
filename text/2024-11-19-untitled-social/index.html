@@ -80,15 +80,17 @@
         for (let i=0; i<detailsList.length; i++) {
             const detail = detailsList[i];
             const key = "detail-" + location.pathname.replaceAll("/", "-") + i;
-            
+
+            console.log(key, localStorage.getItem(key));
+
             if (localStorage.getItem(key))
-                detail.setAttribute("open", true);
+                detail.setAttribute("open", localStorage.getItem(key) == "true");
 
             detail.addEventListener("toggle", function() {
                 if (this.open) {
-                    localStorage.setItem(key, true);
+                    localStorage.setItem(key, "true");
                 } else {
-                    localStorage.removeItem(key);
+                    localStorage.setItem(key, "false");
                 }
             })
         }
