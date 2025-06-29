@@ -9,11 +9,11 @@
 
 html, body {
     margin: 0;
+    font-size: 14px;
 }
 
 body {
     margin: 1.5em;
-    font-size: 14px;
     font-family: 'Atkinson', monospace, sans-serif;
     max-width: 40em;
     line-height: 1.5em;
@@ -54,6 +54,8 @@ figcaption {
     color: white;
     padding: .75em;
     line-height: 1.5em;
+    font-size: 1rem;
+    font-family: 'Atkinson', monospace, sans-serif;
 }
 figure:hover figcaption {
     display: block;
