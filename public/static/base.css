@@ -54,7 +54,7 @@ figcaption {
     display: none;
     background: var(--link-color);
     color: white;
-    padding: .75em;
+    padding: .5em;
     line-height: 1.5em;
     font-size: 1rem;
     font-family: 'Atkinson', monospace, sans-serif;
