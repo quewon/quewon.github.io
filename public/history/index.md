@@ -22,7 +22,7 @@ title: q1's CV
     .three-column, .three-column > div {
         display: flex;
         flex-direction: column;
-        gap: 1.5em .5em;
+        gap: 1em .5em;
     }
 
     details {

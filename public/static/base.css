@@ -120,11 +120,11 @@ button:active {
 
 details {
     border: 1px solid var(--border-light);
+    margin-bottom: .5em;
 }
 
 summary {
     background: white;
-    text-transform: uppercase;
     cursor: pointer;
 }
 summary:focus {
