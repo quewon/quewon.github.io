@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 ---
 
 {%- for post in collections.project -%}
-- [({{ post.date | date: "%Y.%m.%d" }}) {{ post.data.title }}](
+- {{ post.date | date: "%Y.%m.%d" }}&nbsp; [{{ post.data.title }}](
     {%- if post.data.redirect -%}
         {{ post.data.redirect }}
     {%- else -%}

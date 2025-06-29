@@ -32,7 +32,7 @@ title: q1's CV
 
     @media print {
         body {
-            font-size: 9pt;
+            font-size: 8pt;
         }
     }
 
@@ -48,6 +48,10 @@ title: q1's CV
         margin-bottom: 1em;
     }
     ul li::before {
+        display: none;
+    }
+
+    nav {
         display: none;
     }
 </style>
