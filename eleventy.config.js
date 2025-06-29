@@ -12,6 +12,17 @@ export default function (config) {
                 tokens[i].attrPush([ 'target', '_blank' ]);
                 tokens[i].attrPush([ 'rel', 'noopener noreferrer' ]);
             }
+        }).use(iterator, 'figure_images', 'image', function (tokens, i) {
+            const token = tokens[i];
+            const html = `
+                <figure>
+                    <img src="${token.attrGet('src') || ''}" alt="${token.content || ''}">
+                    <figcaption>${token.content}</figcaption>
+                </figure>
+            `;
+
+            token.type = "html_inline";
+            token.content = html;
         })
     )
     
