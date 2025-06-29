@@ -35,4 +35,8 @@ i'm a multimedia artist and developer. sometimes i make [weird web games](https:
 
 <br>
 
+<a href="https://frogmen.itch.io/photograph-of-the-sun" target="_blank" rel="noopener noreferrer">
+
 ![photograph of the sun](https://img.itch.zone/aW1hZ2UvMTkxMzQ2NC8xMTI0NTA1My5wbmc=/original/dvUe%2B8.png)
+
+</a>
