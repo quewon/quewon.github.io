@@ -2,16 +2,11 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import md from 'markdown-it';
 import iterator from 'markdown-it-for-inline';
 import { compress } from 'eleventy-plugin-compress';
+import youtubeEmbed from 'eleventy-plugin-youtube-embed';
 
 export default function (config) {
     config.setLibrary("md", md({
             html: true
-        }).use(iterator, 'url_new_win', 'link_open', function (tokens, i) {
-            const [attrName, href] = tokens[i].attrs.find(attr => attr[0] === 'href');
-            if (href && (href.startsWith("https://") || href.startsWith("http://"))) {
-                tokens[i].attrPush([ 'target', '_blank' ]);
-                tokens[i].attrPush([ 'rel', 'noopener noreferrer' ]);
-            }
         }).use(iterator, 'figure_images', 'image', function (tokens, i) {
             const token = tokens[i];
             const html = `
@@ -23,6 +18,12 @@ export default function (config) {
 
             token.type = "html_inline";
             token.content = html;
+        }).use(iterator, 'url_new_win', 'link_open', function (tokens, i) {
+            const [attrName, href] = tokens[i].attrs.find(attr => attr[0] === 'href');
+            if (href && (href.startsWith("https://") || href.startsWith("http://"))) {
+                tokens[i].attrPush([ 'target', '_blank' ]);
+                tokens[i].attrPush([ 'rel', 'noopener noreferrer' ]);
+            }
         })
     )
     
@@ -37,6 +38,12 @@ export default function (config) {
                 loading: "lazy",
                 decoding: "async"
             }
+        }
+    });
+    config.addPlugin(youtubeEmbed, {
+        modestBranding: true,
+        lite: {
+            responsive: true
         }
     });
     config.addPlugin(compress, {
