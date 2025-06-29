@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on designing this website</title>
+    <link rel="stylesheet" href="/static/base.css">
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <script src="/static/picturefill.min.js" async=""></script>
+</head>
+<body>
+
+    
+    <nav>
+        <button style="margin-right: 1ch" onclick="history.back()">↩</button>
+        
+        
+            
+                <a href="/">home</a>
+            
+            ·
+        
+            
+                
+                <a href="/text">text</a>
+            
+            ·
+        
+            
+                on designing this website
+            
+            
+        
+    </nav>
+
+    
+
+    <main>
+        <div class="post">
+<p>i redesigned this website! using <a href="https://www.11ty.dev" target="_blank" rel="noopener noreferrer">11ty</a>, which is my first static site generator. i'm kind of in love.</p>
+<p>in my visual design i'm extremely minimal at heart. the first theme i made for my tumblr blog in 2012 or something was a lot of negative space, teeny-tiny text, black on white.</p>
+<p>as my interests broaden to cover analog and physical material,</p>
+<p>today i had a fun trawl through the websites showcased by <a href="https://cargo.site/company-writing/sites-in-use" target="_blank" rel="noopener noreferrer">Cargo</a> and found countless websites</p>
+<p>visual design is extremely functional. i've been looking at various portfolio websites</p>
+<p>i had a fun trawl through the websites showcased by <a href="https://cargo.site/company-writing/sites-in-use" target="_blank" rel="noopener noreferrer">Cargo</a></p>
+<p>i tend to understate myself. it's something that i do when i introduce myself in person, when i show off something i've worked on, and when i design websites for myself. often i think it's cool to be understated, because i like to take care to the overlooked, and i aspire to think about the things that i love more than i think about selling myself.</p>
+</div>
+    </main>
+    
+</body>
+
+<script>
+    window.addEventListener("load", () => {
+        var detailsList = document.querySelectorAll("details");
+        for (let i=0; i<detailsList.length; i++) {
+            const details = detailsList[i];
+            const key = "detail-" + location.pathname.replaceAll("/", "-") + i;
+            const stored = localStorage.getItem(key);
+
+            if (stored) {
+                if (stored == "true") {
+                    details.setAttribute("open", true);
+                } else {
+                    details.removeAttribute("open");
+                }
+            }
+
+            details.addEventListener("toggle", function() {
+                if (this.open) {
+                    localStorage.setItem(key, "true");
+                } else {
+                    localStorage.setItem(key, "false");
+                }
+            })
+        }
+    })
+</script>
+</html>
