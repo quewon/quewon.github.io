@@ -10,5 +10,10 @@
         "@11ty/eleventy-img": "^6.0.4",
         "markdown-it": "^14.1.0",
         "markdown-it-for-inline": "^2.0.1"
-    }
+    },
+    "name": "quewon.github.io",
+    "version": "1.0.0",
+    "description": "my website :)",
+    "author": "",
+    "license": "ISC"
 }
