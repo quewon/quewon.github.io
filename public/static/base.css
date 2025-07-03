@@ -5,6 +5,8 @@
     --link-visited: blue;
     --link-active: red;
     --border-light: rgba(0, 0, 0, .1);
+    --body-margin: 1.5rem;
+    --body-width: 40rem;
 }
 
 html, body {
@@ -13,9 +15,9 @@ html, body {
 }
 
 body {
-    margin: 1.5em;
+    margin: var(--body-margin);
     font-family: 'Atkinson', monospace, sans-serif;
-    max-width: 40em;
+    max-width: var(--body-width);
     line-height: 1.5em;
 }
 

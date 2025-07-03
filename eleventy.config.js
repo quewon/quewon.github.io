@@ -28,6 +28,10 @@ export default function (config) {
         })
     )
 
+    config.addFilter("getPage", (arr, url) => {
+        return arr.find(item => item.url == url || item.url == url + "/");
+    });
+
     config.addPlugin(eleventyImageTransformPlugin, {
         formats: ["webp", "jpeg"],
         widths: [300, 600, 1800],

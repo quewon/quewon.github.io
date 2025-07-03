@@ -10,28 +10,7 @@
 </head>
 <body>
 
-    {% unless page.url == "/" %}
-    <nav>
-        <button style="margin-right: 1ch" onclick="history.back()">↩</button>
-        {% assign pages = page.url | split: "/" %}
-        {% for folder in pages %}
-            {% if forloop.first %}
-                <a href="/">home</a>
-            {% elsif forloop.last %}
-                {{ title | default: folder }}
-            {% else %}
-                {% assign path = pages | slice: 0, forloop.index | join: '/' %}
-                <a href="{{ path }}">{{ folder }}</a>
-            {% endif %}
-            {% unless forloop.last %}·{% endunless %}
-        {% endfor %}
-    </nav>
-
-    {% endunless %}
-
-    <main>
-        {{ content }}
-    </main>
+    {{ content }}
     
 </body>
 

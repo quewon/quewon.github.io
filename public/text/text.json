@@ -1,4 +1,5 @@
 {
     "layout": "post.md",
-    "tags": "text"
+    "tags": "text",
+    "collection": "text"
 }

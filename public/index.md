@@ -3,9 +3,53 @@ layout: base.html
 title: hello
 ---
 
-[quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
-github.com/[quewon](https://github.com/quewon)  
-@ [quewon.bsky.social](https://bsky.app/profile/quewon.bsky.social)  
+<style>
+    @media (min-width: 55rem) {
+        header {
+            position: fixed; 
+            margin: var(--body-margin);
+            top: 0;
+            left: 0;
+        }
+        header p {
+            margin-top: 0;
+        }
+        body {
+            margin-left: auto;
+        }
+    }
+</style>
+
+<header>
+
+    [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
+    github.com/[quewon](https://github.com/quewon)  
+    @ [quewon.bsky.social](https://bsky.app/profile/quewon.bsky.social)
+
+    <br>
+
+</header>
+
+{% comment %} <script>
+    var scrolled = false;
+
+    window.addEventListener("load", () => {
+        if (document.documentElement.scrollTop <= 0)
+            animate();
+    })
+
+    function animate() {
+        document.documentElement.scrollTop++;
+        if (scrolled) return;
+        requestAnimationFrame(animate);
+    }
+
+    window.addEventListener("wheel", () => {
+        scrolled = true;
+    })
+</script> {% endcomment %}
+
+[![A physical chessboard. The board is white and green with notions. The pieces are white and black and short in height.](/projects/chessboard.png)](/projects/2025-chessboard)
 
 <br>
 
@@ -18,10 +62,6 @@ github.com/[quewon](https://github.com/quewon)
 <br>
 
 [![Polaroids lay strewn across a transparent acrylic pane, underlit in green fluorescent light. Behind the acrylic stand, a digital 3D garden is projected onto the back wall.](/projects/datagarden-main.jpg)](/projects/2025-data-garden)
-
-<br>
-
-[![A physical chessboard. The board is white and green with notions. The pieces are white and black and short in height.](/projects/chessboard.png)](/projects/2025-chessboard)
 
 <br>
 

@@ -1,21 +1,109 @@
 ---
 layout: base.html
 title: post
+dateFormat: "%Y.%m.%d"
 ---
 
-{%- if source -%}
-*originally posted on [{{ source-name }}]({{ source }})*  
-<br>
-{%- endif -%}
+{% comment %} index.md {% endcomment %}
 
-<div class="post">
-{{ content }}
+<div class="left-aligned">
+    <nav>
+        <button style="margin-right: 1ch" onclick="history.back()">↩</button>
+        {%- assign pages = page.url | split: "/" -%}
+        {%- for folder in pages -%}
+            {%- if forloop.first -%}
+                <a href="/">home</a>
+            {%- elsif forloop.last -%}
+                <span class="current-page-link"> · {{ title | default: folder }}</span>
+            {%- else -%}
+                <span> · </span>
+                {%- assign path = pages | slice: 0, forloop.index | join: '/' -%}
+                {%- assign page = collections.all | getPage: path -%}
+                <a href="{{ path }}">{{ page.data.title | default: folder }}</a>
+            {%- endif -%}
+        {%- endfor -%}
+    </nav>
+
+    <div class="index">
+        {% for post in collections[collection] reversed %}
+        <div>
+            <span>{{ post.date | date: dateFormat }}</span>
+            <span>
+                {%- if post.data.title == title and post.date == date -%}
+                    *{{ post.data.title }}*
+                {%- else -%}
+                    [{{ post.data.title }}](
+                        {%- if post.data.redirect -%}
+                            {{ post.data.redirect }}
+                        {%- else -%}
+                            {{ post.page.url }}
+                        {%- endif -%}
+                    )
+                {%- endif -%}
+            </span>
+        </div>{% endfor %}
+    </div>
 </div>
 
 <style>
-    .post p, li {
-        font-family: serif;
-        font-size: 1.3em;
-        line-height: 1.35em;
+    .index div {
+        display: flex;
+        gap: 2ch;
+    }
+
+    @media (min-width: 80rem) {
+        .left-aligned {
+            position: fixed;
+            top: 0;
+            left: 0;
+            max-width: calc(40rem + var(--body-margin) * 2);
+            height: 100vh;
+            padding: var(--body-margin);
+            box-sizing: border-box;
+
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            overflow: -moz-scrollbars-none;
+            overflow-y: scroll;
+
+            overscroll-behavior: contain;
+        }
+        .left-aligned::-webkit-scrollbar {
+            display: none;
+        }
+        .current-page-link {
+            display: none;
+        }
+    }
+
+    @media (max-width: 80rem) {
+        .index {
+            display: none;
+        }
+    }
+</style>
+
+{% comment %} post {% endcomment %}
+
+{% if source %}
+    *originally posted on [{{ source-name }}]({{ source }})*
+{% endif %}
+
+<div class="post">
+    {{ content }}
+</div>
+
+<style>
+    @media (min-width: 80rem) {
+        .post p, li {
+            font-family: serif;
+            font-size: 1.3em;
+            line-height: 1.35em;
+        }
+        body {
+            margin-left: auto;
+            /* max-width: 50vw; */
+            /* max-width: max(calc(100vw - 40rem - var(--body-margin) * 10), 40rem); */
+        }
     }
 </style>

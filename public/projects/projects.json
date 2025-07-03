@@ -1,4 +1,6 @@
 {
     "layout": "post.md",
-    "tags": "archive"
+    "tags": "archive",
+    "collection": "archive",
+    "dateFormat": "%Y"
 }
