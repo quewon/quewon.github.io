@@ -224,4 +224,8 @@ nav button, nav button:hover, nav button:active {
         --link-color: rgb(72, 139, 231);
         --border-light: rgb(97.306, 99.091, 108.804)
     }
+    figcaption {
+        background: var(--background);
+        color: var(--text);
+    }
 }
