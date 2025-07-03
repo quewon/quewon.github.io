@@ -10,34 +10,63 @@
 </head>
 <body>
 
-    
+    <div class="left-aligned">
     <nav>
-        <button style="margin-right: 1ch" onclick="history.back()">↩</button>
-        
-        
-            
-                <a href="/">home</a>
-            
-            ·
-        
-            
-                
-                <a href="/projects">projects</a>
-            
-            ·
-        
-            
-                a chess set
-            
-            
-        
-    </nav>
+        <button style="margin-right: 1ch" onclick="history.back()">↩</button><a href="/">home</a><span> · </span><a href="/projects">archive</a><span class="current-page-link"> · a chess set</span></nav>
+<p></p><div class="index"><p></p>
+<p></p><div>
+<span>2025</span>
+<span><a href="/projects/2025-data-garden/">Data Garden</a></span>
+</div>
+<div>
+<span>2025</span>
+<span><em>a chess set</em></span>
+</div>
+<div>
+<span>2024</span>
+<span><a href="/projects/2024-untitled-social/">untitled social</a></span>
+</div>
+</div><p></p>
+</div>
+<style>
+    .index div {
+        display: flex;
+        gap: 2ch;
+    }
 
-    
+    @media (min-width: 80rem) {
+        .left-aligned {
+            position: fixed;
+            top: 0;
+            left: 0;
+            max-width: calc(40rem + var(--body-margin) * 2);
+            height: 100vh;
+            padding: var(--body-margin);
+            box-sizing: border-box;
 
-    <main>
-        <div class="post">
-<p>I made a chess set :)</p>
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            overflow: -moz-scrollbars-none;
+            overflow-y: scroll;
+
+            overscroll-behavior: contain;
+        }
+        .left-aligned::-webkit-scrollbar {
+            display: none;
+        }
+        .current-page-link {
+            display: none;
+        }
+    }
+
+    @media (max-width: 80rem) {
+        .index {
+            display: none;
+        }
+    }
+</style>
+<div class="post">
+    <p>I made a chess set :)</p>
 <p>
                 </p><figure>
                     <picture><source type="image/webp" srcset="/projects/2025-chessboard/uHUuO3Z2xo-300.webp 300w, /projects/2025-chessboard/uHUuO3Z2xo-600.webp 600w, /projects/2025-chessboard/uHUuO3Z2xo-1800.webp 1800w" sizes="auto"><img loading="lazy" decoding="async" src="/projects/2025-chessboard/uHUuO3Z2xo-300.jpeg" alt="A physical chessboard. The board is white and green with notions. The pieces are white and black and short in height." width="1800" height="1350" srcset="/projects/2025-chessboard/uHUuO3Z2xo-300.jpeg 300w, /projects/2025-chessboard/uHUuO3Z2xo-600.jpeg 600w, /projects/2025-chessboard/uHUuO3Z2xo-1800.jpeg 1800w" sizes="auto"></picture>
@@ -55,13 +84,19 @@
 <p>The pattern on the board is laser printed onto paper. Paper also acts as the hinge. I tried to find a way to protect the paper, like buying protective film meant for tablets and wrapping it around the board, but it only made the magnetism weaker. Surprisingly the paper has held up without any problem.</p>
 </div>
 <style>
-    .post p, li {
-        font-family: serif;
-        font-size: 1.3em;
-        line-height: 1.35em;
+    @media (min-width: 80rem) {
+        .post p, li {
+            font-family: serif;
+            font-size: 1.3em;
+            line-height: 1.35em;
+        }
+        body {
+            margin-left: auto;
+            /* max-width: 50vw; */
+            /* max-width: max(calc(100vw - 40rem - var(--body-margin) * 10), 40rem); */
+        }
     }
 </style>
-    </main>
     
 </body>
 

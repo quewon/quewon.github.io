@@ -10,34 +10,63 @@
 </head>
 <body>
 
-    
+    <div class="left-aligned">
     <nav>
-        <button style="margin-right: 1ch" onclick="history.back()">↩</button>
-        
-        
-            
-                <a href="/">home</a>
-            
-            ·
-        
-            
-                
-                <a href="/projects">projects</a>
-            
-            ·
-        
-            
-                untitled social
-            
-            
-        
-    </nav>
+        <button style="margin-right: 1ch" onclick="history.back()">↩</button><a href="/">home</a><span> · </span><a href="/projects">archive</a><span class="current-page-link"> · untitled social</span></nav>
+<p></p><div class="index"><p></p>
+<p></p><div>
+<span>2025</span>
+<span><a href="/projects/2025-data-garden/">Data Garden</a></span>
+</div>
+<div>
+<span>2025</span>
+<span><a href="/projects/2025-chessboard/">a chess set</a></span>
+</div>
+<div>
+<span>2024</span>
+<span><em>untitled social</em></span>
+</div>
+</div><p></p>
+</div>
+<style>
+    .index div {
+        display: flex;
+        gap: 2ch;
+    }
 
-    
+    @media (min-width: 80rem) {
+        .left-aligned {
+            position: fixed;
+            top: 0;
+            left: 0;
+            max-width: calc(40rem + var(--body-margin) * 2);
+            height: 100vh;
+            padding: var(--body-margin);
+            box-sizing: border-box;
 
-    <main>
-        <div class="post">
-<p><strong>untitled social</strong> is a small alternative social media that I made for and with a local group of friends in Seoul. We were starting to hang out pretty consistently. We all shared an exhaustion with modern social media, and we had our own various reasons for it. The performativity of an appearance-centric social media culture, the obligation to share things and keep up with it, the toxic algorithms that prioritized engagement over all.</p>
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            overflow: -moz-scrollbars-none;
+            overflow-y: scroll;
+
+            overscroll-behavior: contain;
+        }
+        .left-aligned::-webkit-scrollbar {
+            display: none;
+        }
+        .current-page-link {
+            display: none;
+        }
+    }
+
+    @media (max-width: 80rem) {
+        .index {
+            display: none;
+        }
+    }
+</style>
+<div class="post">
+    <p><strong>untitled social</strong> is a small alternative social media that I made for and with a local group of friends in Seoul. We were starting to hang out pretty consistently. We all shared an exhaustion with modern social media, and we had our own various reasons for it. The performativity of an appearance-centric social media culture, the obligation to share things and keep up with it, the toxic algorithms that prioritized engagement over all.</p>
 <p>At the same time all of us had an intimate relationship with the internet and had experienced the way it could be genuinely informative, stoking our curiosity, culturally fulfilling, and sincerely social.</p>
 <p>So at the time I was drifting away from social media, but didn't cut it out of my life entirely. I didn't post but I still used it to see what my friends were up to and communicate with them. The only place I consistently posted anything was <a href="https://en.wikipedia.org/wiki/Cohost" target="_blank" rel="noopener noreferrer">Cohost</a>, and I really liked what it did for me as a slow social media with no complex feed algorithm based on collected user data, and no numbers. It felt like  old internet forums I frequented: communal, cozy.</p>
 <p>
@@ -58,13 +87,19 @@
 <p>As of May 2025 it has been about 6 months since I shared the link with my friends, and  <b>untitled social</b> has settled as a place to post noncommittally, among known and close friends, random thoughts or news or seeking advice. 871 posts have been made between 6 people. There were 348 posts made in November which has dropped down to 22 posts made in April. Some friends use it more frequently than others. Some write longer posts. For me, it continues to fill a gap that I feel in the internet.</p>
 </div>
 <style>
-    .post p, li {
-        font-family: serif;
-        font-size: 1.3em;
-        line-height: 1.35em;
+    @media (min-width: 80rem) {
+        .post p, li {
+            font-family: serif;
+            font-size: 1.3em;
+            line-height: 1.35em;
+        }
+        body {
+            margin-left: auto;
+            /* max-width: 50vw; */
+            /* max-width: max(calc(100vw - 40rem - var(--body-margin) * 10), 40rem); */
+        }
     }
 </style>
-    </main>
     
 </body>
 
