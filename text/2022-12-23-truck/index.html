@@ -10,9 +10,10 @@
 </head>
 <body>
 
-    <div class="left-aligned">
     <nav>
-        <button style="margin-right: 1ch" onclick="history.back()">↩</button><a href="/">home</a><span> · </span><a href="/text">text</a><span class="current-page-link"> · baby get in my truck</span></nav>
+    <button style="margin-right: 1ch" onclick="history.back()">↩</button><a href="/">home</a><span> · </span><a href="/text">text</a><span class="current-page-link"> · baby get in my truck</span></nav>
+<div class="right-aligned">
+    index
 <p></p><div class="index"><p></p>
 <p></p><div>
 <span>2025.06.30</span>
@@ -131,11 +132,11 @@
     }
 
     @media (min-width: 80rem) {
-        .left-aligned {
+        .right-aligned {
             position: fixed;
             top: 0;
-            left: 0;
-            max-width: calc(40rem + var(--body-margin) * 2);
+            right: 0;
+            width: calc(40rem + var(--body-margin) * 2);
             height: 100vh;
             padding: var(--body-margin);
             box-sizing: border-box;
@@ -147,16 +148,19 @@
 
             overscroll-behavior: contain;
         }
-        .left-aligned::-webkit-scrollbar {
+        .right-aligned::-webkit-scrollbar {
             display: none;
         }
         .current-page-link {
             display: none;
         }
+        .index p {
+            margin: 0;
+        }
     }
 
     @media (max-width: 80rem) {
-        .index {
+        .right-aligned {
             display: none;
         }
     }
@@ -171,11 +175,6 @@
             font-family: serif;
             font-size: 1.3em;
             line-height: 1.35em;
-        }
-        body {
-            margin-left: auto;
-            /* max-width: 50vw; */
-            /* max-width: max(calc(100vw - 40rem - var(--body-margin) * 10), 40rem); */
         }
     }
 </style>
