@@ -99,11 +99,9 @@ dateFormat: "%Y.%m.%d"
 </div>
 
 <style>
-    @media (min-width: 80rem) {
-        .post p, li {
-            font-family: serif;
-            font-size: 1.3em;
-            line-height: 1.35em;
-        }
+    .post p, li {
+        font-family: serif;
+        font-size: 1.3em;
+        line-height: 1.35em;
     }
 </style>
