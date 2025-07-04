@@ -219,9 +219,9 @@ nav button, nav button:hover, nav button:active {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #17181c;
-        --text: rgb(231.441, 232.376, 224.815);
-        --link-color: rgb(72, 139, 231);
+        --background: rgb(20, 20, 20);
+        --text: rgb(198, 199, 192);
+        --link-color: rgb(61, 138, 219);
         --border-light: rgb(97.306, 99.091, 108.804)
     }
     figcaption {
