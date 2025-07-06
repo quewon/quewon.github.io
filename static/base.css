@@ -9,6 +9,7 @@
     --border-light: rgba(0, 0, 0, .1);
     --body-margin: 1.5rem;
     --body-width: 40rem;
+    --font-family: 'Atkinson Hyperlegible Mono', monospace, sans-serif;
 }
 
 html, body {
@@ -20,7 +21,7 @@ html, body {
 
 body {
     margin: var(--body-margin);
-    font-family: 'Atkinson', monospace, sans-serif;
+    font-family: var(--font-family);
     max-width: var(--body-width);
     line-height: 1.5em;
 }
@@ -63,7 +64,7 @@ figcaption {
     padding: .5em;
     line-height: 1.5em;
     font-size: 1rem;
-    font-family: 'Atkinson', monospace, sans-serif;
+    font-family: var(--font-family);
 }
 figure:hover figcaption {
     display: block;
