@@ -25,6 +25,10 @@
     })
 </script>
 <style>
+    body {
+        font-family: sans-serif;
+    }
+
     .three-column, .three-column > div {
         display: flex;
         flex-direction: column;
@@ -33,22 +37,6 @@
 
     details {
         height: fit-content;
-    }
-
-    @media (min-width: 50em), print {
-        body {
-            max-width: unset;
-        }
-        .three-column {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-
-    @media print {
-        body {
-            font-size: 8pt;
-        }
     }
 
     ul {
@@ -69,14 +57,41 @@
     nav {
         display: none;
     }
+
+    @media (min-width: 50em), print {
+        body {
+            max-width: unset;
+        }
+        .three-column {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .print-button {
+            position: fixed; 
+            right: var(--body-margin); 
+            top: var(--body-margin);
+        }
+    }
+
+    @media print {
+        body {
+            font-size: 8pt;
+        }
+        .print-button {
+            display: none;
+        }
+    }
 </style>
-<h3>QUEWON &quot;Q1&quot; CHIN</h3>
-<h4>WEB &amp; GAME DEVELOPER</h4>
+<div class="print-button">
+    <button onclick="print()">Download my CV!</button><br><br>
+</div>
+<h3>Quewon &quot;Q1&quot; Chin</h3>
+<h4>Web &amp; Game Developer</h4>
 <br>
-<p><em>Email</em>; <a href="mailto:quewon.chin@gmail.com">quewon.chin@gmail.com</a><br>
-<em>Web</em>; <a href="/">quewon.github.io</a></p>
-<p><em>Born</em>; Suwon, South Korea, 2002<br>
-<em>Lives</em>; Paris, France</p>
+<p><em>Email</em>;  <a href="mailto:quewon.chin@gmail.com">quewon.chin@gmail.com</a><br>
+<em>Web</em>;  <a href="/">quewon.github.io</a></p>
+<p><em>Born</em>;  Suwon, South Korea, 2002<br>
+<em>Lives</em>;  Paris, France</p>
 <br>
 <div class="three-column">
 <details open="">
