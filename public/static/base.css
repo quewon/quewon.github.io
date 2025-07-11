@@ -41,10 +41,9 @@ h4, h5, h6, summary {
 h1 { font-size: 2em }
 h2 { font-size: 1.5em }
 h3 { font-size: 1.25em }
-h4 { font-size: 1em }
+h4, summary { font-size: 1.1em }
 h5 { font-size: .8em }
 h6 { font-size: .5em }
-summary { font-size: 1.15rem }
 
 figure {
     width: fit-content;
@@ -130,35 +129,18 @@ button:active {
 }
 
 details {
-    border: 1px solid var(--border-light);
     margin-bottom: .5em;
 }
 
 summary {
     cursor: pointer;
+    line-height: 2em;
 }
 summary:focus {
     outline: none;
 }
 details[open] summary {
     border-bottom: 1px solid var(--border-light);
-}
-summary {
-    list-style-type: "";
-}
-summary::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    height: 1.5em;
-    width: 1.5em;
-    margin-right: .25em;
-    background-image: url("/static/details-closed.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    image-rendering: pixelated;
-    mix-blend-mode: exclusion;
 }
 
 ul, ol {
@@ -213,7 +195,10 @@ nav button, nav button:hover, nav button:active {
     a:hover {
         text-decoration: none;
     }
-    a[target="_blank"]::after {
+    a:not(:has(img))[target="_blank"]::after {
+        display: none;
+    }
+    .hide-on-print {
         display: none;
     }
 }

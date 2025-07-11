@@ -19,6 +19,10 @@ title: q1's CV
 </script>
 
 <style>
+    body {
+        font-family: sans-serif;
+    }
+
     .three-column, .three-column > div {
         display: flex;
         flex-direction: column;
@@ -27,22 +31,6 @@ title: q1's CV
 
     details {
         height: fit-content;
-    }
-
-    @media (min-width: 50em), print {
-        body {
-            max-width: unset;
-        }
-        .three-column {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-
-    @media print {
-        body {
-            font-size: 8pt;
-        }
     }
 
     ul {
@@ -63,18 +51,46 @@ title: q1's CV
     nav {
         display: none;
     }
+
+    @media (min-width: 50em), print {
+        body {
+            max-width: unset;
+        }
+        .three-column {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .print-button {
+            position: fixed; 
+            right: var(--body-margin); 
+            top: var(--body-margin);
+        }
+    }
+
+    @media print {
+        body {
+            font-size: 8pt;
+        }
+        .print-button {
+            display: none;
+        }
+    }
 </style>
 
-### QUEWON "Q1" CHIN
-#### WEB & GAME DEVELOPER
+<div class="print-button" class="hide-on-print">
+    <button onclick="print()">Download my CV!</button><br><br>
+</div>
+
+### Quewon "Q1" Chin
+#### Web & Game Developer
 
 <br>
 
-*Email*; [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
-*Web*; [quewon.github.io](/)
+*Email*; &nbsp;[quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
+*Web*; &nbsp;[quewon.github.io](/)
 
-*Born*; Suwon, South Korea, 2002  
-*Lives*; Paris, France
+*Born*; &nbsp;Suwon, South Korea, 2002  
+*Lives*; &nbsp;Paris, France
 
 <br>
 
