@@ -1,6 +1,6 @@
 ---
 layout: base.html
-title: q1's CV
+title: q1's history
 ---
 
 <script>
@@ -69,7 +69,7 @@ title: q1's CV
 
     @media print {
         body {
-            font-size: 8pt;
+            font-size: 11pt;
         }
         .print-button {
             display: none;
@@ -78,21 +78,17 @@ title: q1's CV
 </style>
 
 <div class="print-button" class="hide-on-print">
-    <button onclick="print()">Download my CV!</button><br><br>
+    <button onclick="print()">Download this CV!</button><br><br>
 </div>
 
 ### Quewon "Q1" Chin
-#### Web & Game Developer
 
-<br>
+Currently based in Paris, France.
 
-*Email*; &nbsp;[quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
-*Web*; &nbsp;[quewon.github.io](/)
-
-*Born*; &nbsp;Suwon, South Korea, 2002  
-*Lives*; &nbsp;Paris, France
-
-<br>
+Email:&nbsp; [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
+LinkedIn:&nbsp; [linkedin.com/in/quewon-chin](https://www.linkedin.com/in/quewon-chin/)  
+GitHub:&nbsp; [github.com/quewon](https://github.com/quewon)  
+Website:&nbsp; [quewon.github.io](/)
 
 <div class="three-column">
 <details open>
@@ -129,19 +125,19 @@ title: q1's CV
 </details>
 
 <details open>
-    <summary>Selected Web Projects</summary>
+    <summary>Web Projects</summary>
 
-- [Gülşah Ayla Bayrak](https://aylas-wip-portfolio.netlify.app/), artist portfolio website  
+- [Artist Portfolio Website](https://aylas-wip-portfolio.netlify.app/), 2025  
   Development, design
-- [untitled social](/projects/2024-untitled-social), an alternative social media platform  
+- [untitled social](/projects/2024-untitled-social), 2024–Present  
   Development, design
-- [Korea Art Directors Association (KADA) Homepage](https://kada-art.org/)  
+- [Korea Art Directors Association (KADA) Homepage](https://kada-art.org/), 2024  
   Development, design
-- [Data Garden](/projects/2025-data-garden), media art installation  
+- [Data Garden](/projects/2025-data-garden), 2024  
   Development
-- [가치의 재생](https://dima-newcon.github.io/2023/), exhibition website  
+- [《가치의 재생》 Exhibition Website](https://dima-newcon.github.io/2023/), 2023  
   Development
-- [NKTech Power Cylinders](http://www.nkpt.com/), catalogue website  
+- [NKTech Power Cylinders Catalogue Website](http://www.nkpt.com/), 2023  
   Development
 
 </details>
@@ -152,8 +148,8 @@ title: q1's CV
     <summary>Education</summary>
 
 - Dong-ah Institute of Media and Arts  
-  B.A. in Media Contents Production, 2024-2025  
-  A.A. in New Media Contents, 2021–2024
+  BA in Media Contents Production, 2024–2025  
+  AA in New Media Contents, 2021–2024
 
 </details>
 
