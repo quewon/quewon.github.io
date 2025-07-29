@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>on designing this website</title>
     <link rel="stylesheet" href="/static/base.css">
     <link rel="icon" type="image/png" href="/static/favicon.png">
@@ -177,8 +178,13 @@
     .post {
         font-family: serif;
         text-align: justify;
-        /* font-size: 1rem; */
         line-height: 1.2em;
+    }
+    @media (max-device-width: 1000px) {
+        .post {
+            font-family: serif;
+            font-size: 1.3em;
+        }
     }
 </style>
     

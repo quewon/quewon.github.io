@@ -33,6 +33,10 @@ body {
     line-height: 1.5em;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2em;
+}
+
 figure {
     width: fit-content;
     margin: 0;
@@ -50,8 +54,9 @@ figcaption {
     color: var(--background);
     padding: .5em;
     line-height: 1.5em;
-    font-size: unset;
+    font-size: 1rem;
     font-family: var(--font-family);
+    z-index: 1;
 }
 figure:hover figcaption {
     display: block;
@@ -189,6 +194,12 @@ nav button, nav button:hover, nav button:active {
     }
     .hide-on-print {
         display: none;
+    }
+}
+
+@media (max-device-width: 1000px) {
+    body {
+        font-size: 14px;
     }
 }
 
