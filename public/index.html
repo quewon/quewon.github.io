@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <title>hello</title>
+    <style>
+        body {
+            white-space: pre-wrap;
+            word-break: break-all;
+            color: lightgray;
+            font-family: monospace;
+            display: none;
+        }
+        .text {
+            color: black;
+            word-break: normal;
+        }
+        a {
+            color: blue;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+                       <a href="mailto:quewon.chin@gmail.com">quewon.chin@gmail.com</a>
+                          <a href="https://github.com/quewon">github.com/quewon</a>
+        <a href="https://bsky.app/profile/quewon.bsky.social">@quewon.bsky.social</a>
+    </header>
+
+    <p>
+        hi, my name is q1. welcome to my website.
+    </p>
+
+    <p>
+        i write html code 
+        <a href="https://frogmen.itch.io">for fun</a> 
+                     <a href="/history/">(and for work)</a>.
+    </p>
+
+    <p>
+        i also write 
+        <a href="/text/">other things.</a>
+    </p>
+</body>
+
+<script type="text/javascript">
+    fetch('index.html').then(res => res.text())
+    .then(text => {
+        document.body.textContent = text;
+
+        var html = document.body.innerHTML;
+        html = html.replaceAll("&lt;header&gt;", "&lt;header&gt;<span class='text'>");
+        html = html.replaceAll("&lt;/header&gt;", "</span>&lt;/header&gt;");
+        html = html.replaceAll("&lt;p&gt;", "&lt;p&gt;<span class='text'>");
+        html = html.replaceAll("&lt;/p&gt;", "</span>&lt;/p&gt;");
+        var s = html.split("&lt;/body&gt;");
+        var ss = s[0].split("&lt;a href=\"");
+        for (let i=0; i<ss.length-1; i++) {
+            var href = ss[i+1].split("\"&gt;")[0];
+            ss[i] = ss[i] + `</span>&lt;a href="${href}"&gt;<a href="${href}">`;
+            ss[i+1] = ss[i+1].split("\"&gt;")[1];
+        }
+        s[0] = ss.join("");
+        s[0] = s[0].replaceAll("&lt;/a&gt;", "</a>&lt;/a&gt;<span class=\"text\">");
+        html = s.join("&lt;/body&gt;");
+        document.body.innerHTML = html;
+        document.body.style.display = "block";
+    })
+</script>
+
+</html>

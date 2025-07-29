@@ -99,9 +99,10 @@ dateFormat: "%Y.%m.%d"
 </div>
 
 <style>
-    .post p, li {
+    .post {
         font-family: serif;
-        font-size: 1.3em;
-        line-height: 1.35em;
+        text-align: justify;
+        /* font-size: 1.3em;
+        line-height: 1.35em; */
     }
 </style>

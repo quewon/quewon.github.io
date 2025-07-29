@@ -19,10 +19,6 @@ title: q1's history
 </script>
 
 <style>
-    body {
-        font-family: sans-serif;
-    }
-
     .three-column, .three-column > div {
         display: flex;
         flex-direction: column;
@@ -69,7 +65,7 @@ title: q1's history
 
     @media print {
         body {
-            font-size: 11pt;
+            font-size: 10pt;
         }
         .print-button {
             display: none;
@@ -83,12 +79,12 @@ title: q1's history
 
 ### Quewon "Q1" Chin
 
-Currently based in Paris, France.
+Web & game developer currently based in Paris, France.
 
-Email:&nbsp; [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
+Email:&nbsp;&nbsp;&nbsp;&nbsp; [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
 LinkedIn:&nbsp; [linkedin.com/in/quewon-chin](https://www.linkedin.com/in/quewon-chin/)  
-GitHub:&nbsp; [github.com/quewon](https://github.com/quewon)  
-Website:&nbsp; [quewon.github.io](/)
+GitHub:&nbsp;&nbsp;&nbsp; [github.com/quewon](https://github.com/quewon)  
+Website:&nbsp;&nbsp; [quewon.github.io](/)
 
 <div class="three-column">
 <details open>
@@ -125,7 +121,7 @@ Website:&nbsp; [quewon.github.io](/)
 </details>
 
 <details open>
-    <summary>Web Projects</summary>
+    <summary>Web</summary>
 
 - [Artist Portfolio Website](https://aylas-wip-portfolio.netlify.app/), 2025  
   Development, design
@@ -161,14 +157,6 @@ Website:&nbsp; [quewon.github.io](/)
 - 가치의 재생, Gyeonggi Art Center, 2023
 - 뉴미디어 유니버스, Gyeonggi Art Center, 2022
 - *Dear Deer*, Dong-ah Institute of Media and Arts, 2021
-
-</details>
-
-<details open>
-    <summary>Publications</summary>
-
-- [Indiepocalypse #50](https://pizzapranks.itch.io/indiepocalypse-50), 2024
-- [Paradise Digest](https://paradise-collab.itch.io), Summer 2024
 
 </details>
 
