@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap'); */
 
 :root {
     --background: white;
@@ -15,9 +15,15 @@
 
 html, body {
     margin: 0;
-    font-size: 13px;
     background: var(--background);
     color: var(--text);
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -26,26 +32,6 @@ body {
     max-width: var(--body-width);
     line-height: 1.5em;
 }
-
-/* h1, h2, h3, h4, h5, h6, summary {
-    font-family: 'Arial', sans-serif;
-    font-family: sans-serif;
-    line-height: 1em;
-}
-h1, h2, h3 {
-    font-weight: bold;
-    margin: .5em 0;
-}
-h4, h5, h6, summary {
-    font-weight: normal;
-    margin: 0;
-}
-h1 { font-size: 2em }
-h2 { font-size: 1.5em }
-h3 { font-size: 1.25em }
-h4, summary { font-size: 1.1em }
-h5 { font-size: .8em }
-h6 { font-size: .5em } */
 
 figure {
     width: fit-content;
@@ -64,7 +50,6 @@ figcaption {
     color: var(--background);
     padding: .5em;
     line-height: 1.5em;
-    /* font-size: 1rem; */
     font-size: unset;
     font-family: var(--font-family);
 }
@@ -137,7 +122,6 @@ details {
 
 summary {
     cursor: pointer;
-    /* line-height: 2em; */
 }
 summary:focus {
     outline: none;
