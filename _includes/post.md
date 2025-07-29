@@ -102,7 +102,7 @@ dateFormat: "%Y.%m.%d"
     .post {
         font-family: serif;
         text-align: justify;
-        font-size: 1.3em;
+        /* font-size: 1rem; */
         line-height: 1.2em;
     }
 </style>
