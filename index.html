@@ -1,104 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hello</title>
-    <link rel="stylesheet" href="/static/base.css">
     <link rel="icon" type="image/png" href="/static/favicon.png">
-    <script src="/static/picturefill.min.js" async=""></script>
-</head>
-<body>
-
+    <title>hello</title>
     <style>
-    @media (min-width: 55rem) {
-        header {
-            position: fixed; 
-            margin: var(--body-margin);
-            top: 0;
-            left: 0;
-        }
-        header p {
-            margin-top: 0;
-        }
         body {
-            margin-left: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            color: lightgray;
+            font-family: monospace;
+            display: none;
         }
-    }
-</style>
-<header>
-<p><a href="mailto:quewon.chin@gmail.com">quewon.chin@gmail.com</a><br>
-github.com/<a href="https://github.com/quewon" target="_blank" rel="noopener noreferrer">quewon</a><br>
-@ <a href="https://bsky.app/profile/quewon.bsky.social" target="_blank" rel="noopener noreferrer">quewon.bsky.social</a></p>
-<p><br></p>
-</header>
-<p><a href="/projects/2025-chessboard">
-                <figure>
-                    <picture><source type="image/webp" srcset="/img/uHUuO3Z2xo-300.webp 300w, /img/uHUuO3Z2xo-600.webp 600w, /img/uHUuO3Z2xo-1800.webp 1800w" sizes="auto"><img loading="lazy" decoding="async" src="/img/uHUuO3Z2xo-300.jpeg" alt="A physical chessboard. The board is white and green with notions. The pieces are white and black and short in height." width="1800" height="1350" srcset="/img/uHUuO3Z2xo-300.jpeg 300w, /img/uHUuO3Z2xo-600.jpeg 600w, /img/uHUuO3Z2xo-1800.jpeg 1800w" sizes="auto"></picture>
-                    <figcaption>A physical chessboard. The board is white and green with notions. The pieces are white and black and short in height.</figcaption>
-                </figure>
-            </a></p>
-<br>
-<a href="https://frogmen.itch.io/subway" target="_blank" rel="noopener noreferrer">
-<p>
-                </p><figure>
-                    <picture><source type="image/webp" srcset="/MjDyc2JKFB-300.webp 300w, /MjDyc2JKFB-600.webp 600w, /MjDyc2JKFB-1619.webp 1619w" sizes="auto"><img loading="lazy" decoding="async" src="/MjDyc2JKFB-300.jpeg" alt="Cover for my subway simulation 'how to use the subway'." width="1619" height="2160" srcset="/MjDyc2JKFB-300.jpeg 300w, /MjDyc2JKFB-600.jpeg 600w, /MjDyc2JKFB-1619.jpeg 1619w" sizes="auto"></picture>
-                    <figcaption>Cover for my subway simulation 'how to use the subway'.</figcaption>
-                </figure>
-            <p></p>
-</a>
-<br>
-<p><a href="/projects/2025-data-garden">
-                <figure>
-                    <picture><source type="image/webp" srcset="/img/IQyNVsptkQ-300.webp 300w, /img/IQyNVsptkQ-600.webp 600w, /img/IQyNVsptkQ-1500.webp 1500w" sizes="auto"><img loading="lazy" decoding="async" src="/img/IQyNVsptkQ-300.jpeg" alt="Polaroids lay strewn across a transparent acrylic pane, underlit in green fluorescent light. Behind the acrylic stand, a digital 3D garden is projected onto the back wall." width="1500" height="1000" srcset="/img/IQyNVsptkQ-300.jpeg 300w, /img/IQyNVsptkQ-600.jpeg 600w, /img/IQyNVsptkQ-1500.jpeg 1500w" sizes="auto"></picture>
-                    <figcaption>Polaroids lay strewn across a transparent acrylic pane, underlit in green fluorescent light. Behind the acrylic stand, a digital 3D garden is projected onto the back wall.</figcaption>
-                </figure>
-            </a></p>
-<br>
-<p>hey, my name is q1.</p>
-<p>i'm a multimedia artist and developer. sometimes i make <a href="https://frogmen.itch.io/subway" target="_blank" rel="noopener noreferrer">weird web games</a> or <a href="/projects/2025-data-garden">media art installations</a> or <a href="/projects/2025-chessboard">3d printed chess sets</a>.</p>
-<ul>
-<li>on itch.io i upload <a href="https://frogmen.itch.io/" target="_blank" rel="noopener noreferrer">games</a> you play in your browser</li>
-<li>i keep an <a href="https://music-archive.netlify.app/" target="_blank" rel="noopener noreferrer">archive of music</a> i've shared with others</li>
-<li>i'm trying to <a href="/text">write</a> more of my stories and thoughts</li>
-<li>... <a href="/history">and i am looking for work!</a></li>
-</ul>
-<br>
-<a href="https://frogmen.itch.io/photograph-of-the-sun" target="_blank" rel="noopener noreferrer">
-<p>
-                </p><figure>
-                    <picture><source type="image/webp" srcset="/1fqh4RCgmv-300.webp 300w, /1fqh4RCgmv-600.webp 600w, /1fqh4RCgmv-1034.webp 1034w" sizes="auto"><img loading="lazy" decoding="async" src="/1fqh4RCgmv-300.jpeg" alt="Screenshot of my game 'photograph of the sun'. A small 3d solar system populated by simple geometric figures." width="1034" height="1360" srcset="/1fqh4RCgmv-300.jpeg 300w, /1fqh4RCgmv-600.jpeg 600w, /1fqh4RCgmv-1034.jpeg 1034w" sizes="auto"></picture>
-                    <figcaption>Screenshot of my game 'photograph of the sun'. A small 3d solar system populated by simple geometric figures.</figcaption>
-                </figure>
-            <p></p>
-</a>
-    
+        .text {
+            color: black;
+            word-break: normal;
+        }
+        a {
+            color: blue;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+                       <a href="mailto:quewon.chin@gmail.com">quewon.chin@gmail.com</a>
+                          <a href="https://github.com/quewon">github.com/quewon</a>
+        <a href="https://bsky.app/profile/quewon.bsky.social">@quewon.bsky.social</a>
+    </header>
+
+    <p>
+        hi, my name is q1. welcome to my website.
+    </p>
+
+    <p>
+        i write html code 
+        <a href="https://frogmen.itch.io">for fun</a> 
+                     <a href="/history/">(and for work)</a>.
+    </p>
+
+    <p>
+        i also write 
+        <a href="/text/">other things.</a>
+    </p>
 </body>
 
-<script>
-    window.addEventListener("load", () => {
-        var detailsList = document.querySelectorAll("details");
-        for (let i=0; i<detailsList.length; i++) {
-            const details = detailsList[i];
-            const key = "detail-" + location.pathname.replaceAll("/", "-") + i;
-            const stored = localStorage.getItem(key);
+<script type="text/javascript">
+    fetch('index.html').then(res => res.text())
+    .then(text => {
+        document.body.textContent = text;
 
-            if (stored) {
-                if (stored == "true") {
-                    details.setAttribute("open", true);
-                } else {
-                    details.removeAttribute("open");
-                }
-            }
-
-            details.addEventListener("toggle", function() {
-                if (this.open) {
-                    localStorage.setItem(key, "true");
-                } else {
-                    localStorage.setItem(key, "false");
-                }
-            })
+        var html = document.body.innerHTML;
+        html = html.replaceAll("&lt;header&gt;", "&lt;header&gt;<span class='text'>");
+        html = html.replaceAll("&lt;/header&gt;", "</span>&lt;/header&gt;");
+        html = html.replaceAll("&lt;p&gt;", "&lt;p&gt;<span class='text'>");
+        html = html.replaceAll("&lt;/p&gt;", "</span>&lt;/p&gt;");
+        var s = html.split("&lt;/body&gt;");
+        var ss = s[0].split("&lt;a href=\"");
+        for (let i=0; i<ss.length-1; i++) {
+            var href = ss[i+1].split("\"&gt;")[0];
+            ss[i] = ss[i] + `</span>&lt;a href="${href}"&gt;<a href="${href}">`;
+            ss[i+1] = ss[i+1].split("\"&gt;")[1];
         }
+        s[0] = ss.join("");
+        s[0] = s[0].replaceAll("&lt;/a&gt;", "</a>&lt;/a&gt;<span class=\"text\">");
+        html = s.join("&lt;/body&gt;");
+        document.body.innerHTML = html;
+        document.body.style.display = "block";
     })
 </script>
+
 </html>
