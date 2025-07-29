@@ -102,7 +102,12 @@ dateFormat: "%Y.%m.%d"
     .post {
         font-family: serif;
         text-align: justify;
-        /* font-size: 1rem; */
         line-height: 1.2em;
+    }
+    @media (max-device-width: 1000px) {
+        .post {
+            font-family: serif;
+            font-size: 1.3em;
+        }
     }
 </style>
