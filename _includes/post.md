@@ -58,7 +58,7 @@ dateFormat: "%Y.%m.%d"
             position: fixed;
             top: 0;
             right: 0;
-            width: calc(40rem + var(--body-margin) * 2);
+            width: calc(var(--body-width) + var(--body-margin) * 2);
             height: 100vh;
             padding: var(--body-margin);
             box-sizing: border-box;
@@ -100,14 +100,9 @@ dateFormat: "%Y.%m.%d"
 
 <style>
     .post {
-        font-family: serif;
+        font-family: 'Georgia', serif;
         text-align: justify;
-        line-height: 1.2em;
-    }
-    @media (max-device-width: 1000px) {
-        .post {
-            font-family: serif;
-            font-size: 1.3em;
-        }
+        font-size: 1.2em;
+        line-height: 1.3em;
     }
 </style>

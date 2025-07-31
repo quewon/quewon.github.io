@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
 
 :root {
     --background: white;
@@ -8,12 +8,11 @@
     --link-active: red;
     --border-light: rgba(0, 0, 0, .1);
     --body-margin: 1rem;
-    --body-width: 40rem;
-    /* --font-family: 'Atkinson Hyperlegible Mono', monospace, sans-serif; */
-    --font-family: monospace;
+    --body-width: 35rem;
+    --font-family: 'Atkinson Hyperlegible Mono', monospace;
 }
 
-html, body {
+html, body {      
     margin: 0;
     background: var(--background);
     color: var(--text);
@@ -27,6 +26,7 @@ html {
 }
 
 body {
+    font-size: 14px;
     margin: var(--body-margin);
     font-family: var(--font-family);
     max-width: var(--body-width);
@@ -194,12 +194,6 @@ nav button, nav button:hover, nav button:active {
     }
     .hide-on-print {
         display: none;
-    }
-}
-
-@media (max-device-width: 1000px) {
-    body {
-        font-size: 14px;
     }
 }
 
