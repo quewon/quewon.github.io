@@ -10,6 +10,8 @@
     --body-margin: 1rem;
     --body-width: 35rem;
     --font-family: 'Atkinson Hyperlegible Mono', monospace;
+    --rem: 14px;
+    --line-height: 1.5em;
 }
 
 html, body {      
@@ -18,19 +20,12 @@ html, body {
     color: var(--text);
 }
 
-html {
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-}
-
 body {
-    font-size: 14px;
+    font-size: var(--rem);
     margin: var(--body-margin);
     font-family: var(--font-family);
     max-width: var(--body-width);
-    line-height: 1.5em;
+    line-height: var(--line-height);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,10 +48,10 @@ figcaption {
     background: var(--link-color);
     color: var(--background);
     padding: .5em;
-    line-height: 1.5em;
-    font-size: 1rem;
-    font-family: var(--font-family);
+    line-height: var(--line-height);
     z-index: 1;
+    font-size: var(--rem);
+    font-family: var(--font-family);
 }
 figure:hover figcaption {
     display: block;
