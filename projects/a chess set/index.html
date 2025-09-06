@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        a chess set
+    </title>
+    <link rel="stylesheet" href="/static/base.css">
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <script src="/static/picturefill.min.js" async=""></script>
+</head>
+<body>
+
+    
+<header>
+    <nav><a href="/">home</a> · <a href="/projects">archive</a> · <!--a chess set-->
+                a chess set</nav>
+</header>
+
+<style>
+    aside {
+        position: fixed; 
+        top: 0; 
+        right: 0;
+        padding: var(--body-margin);
+        box-sizing: border-box;
+        width: 50vw;
+        height: 100vh;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow: -moz-scrollbars-none;
+        overflow-y: scroll;
+    }
+
+    main {
+        max-width: calc(50vw - var(--body-margin) * 2);
+    }
+
+    @media (max-width: 600px) {
+        aside {
+            position: relative;
+            padding: 0;
+            height: unset;
+            width: unset;
+        }
+
+        main {
+            max-width: unset;
+        }
+    }
+</style>
+<main>
+    <style>
+    @media (max-width: 600px) {
+        aside {
+            display: none;
+        }
+    }
+</style>
+<div class="post">
+    <p>I made a chess set :)</p>
+<p>
+                </p><figure>
+                    <picture><source type="image/webp" srcset="/projects/a chess set/uHUuO3Z2xo-300.webp 300w, /projects/a chess set/uHUuO3Z2xo-600.webp 600w, /projects/a chess set/uHUuO3Z2xo-1800.webp 1800w" sizes="auto"><img loading="lazy" decoding="async" src="/projects/a chess set/uHUuO3Z2xo-300.jpeg" alt="A physical chessboard. The board is white and green with notions. The pieces are white and black and short in height." width="1800" height="1350" srcset="/projects/a chess set/uHUuO3Z2xo-300.jpeg 300w, /projects/a chess set/uHUuO3Z2xo-600.jpeg 600w, /projects/a chess set/uHUuO3Z2xo-1800.jpeg 1800w" sizes="auto"></picture>
+                    <figcaption>A physical chessboard. The board is white and green with notions. The pieces are white and black and short in height.</figcaption>
+                </figure>
+            <p></p>
+<p>It's a portable magnetic set. The board is steel, 16cm in width, and can be folded in half. Pieces have a small magnet hot glued to the bottom and covered with green felt. Despite their small size, the magnets make them feel as if they're nice and weighted.</p>
+<p>Pieces are modeled after some travel chess sets I found online. The knight is inspired by the simple wooden knight in my family's chess set. Modeled in Blender, printed on my 3d printer (a Bambu Lab A1 Mini), painted with acrylic using a brush and sprayed with Mr. Hobby Matt Topcoat. They fit perfectly into a sake cup I bought at a convenience store in Japan.</p>
+<p>
+                </p><figure>
+                    <picture><source type="image/webp" srcset="/projects/a chess set/VodPrFj5WG-300.webp 300w, /projects/a chess set/VodPrFj5WG-600.webp 600w, /projects/a chess set/VodPrFj5WG-1800.webp 1800w" sizes="auto"><img loading="lazy" decoding="async" src="/projects/a chess set/VodPrFj5WG-300.jpeg" alt="Pieces packed into the sake cup." width="1800" height="2400" srcset="/projects/a chess set/VodPrFj5WG-300.jpeg 300w, /projects/a chess set/VodPrFj5WG-600.jpeg 600w, /projects/a chess set/VodPrFj5WG-1800.jpeg 1800w" sizes="auto"></picture>
+                    <figcaption>Pieces packed into the sake cup.</figcaption>
+                </figure>
+            <p></p>
+<p>The pattern on the board is laser printed onto paper. Paper also acts as the hinge. I tried to find a way to protect the paper, like buying protective film meant for tablets and wrapping it around the board, but it only made the magnetism weaker. Surprisingly the paper has held up without any problem.</p>
+</div>
+</main>
+<aside class="monospace">
+<p>index</p>
+<p></p><ul><p></p>
+<p><li><a href="https://quewon.github.io/html-day-2025/" target="_blank" rel="noopener noreferrer">html day 2025</a></li>
+<li><i>a chess set
+</i></li>
+<li><a href="/projects/Data%20Garden/">Data Garden</a></li>
+<li><a href="https://quewon.github.io/html-day/" target="_blank" rel="noopener noreferrer">html day 2024</a></li>
+<li><a href="/projects/untitled%20social/">untitled social</a></li></p></ul><p></p>
+</aside>
+    
+</body>
+
+<script>
+    window.addEventListener("load", () => {
+        var detailsList = document.querySelectorAll("details");
+        for (let i=0; i<detailsList.length; i++) {
+            const details = detailsList[i];
+            const key = "detail-" + location.pathname.replaceAll("/", "-") + i;
+            const stored = localStorage.getItem(key);
+
+            if (stored) {
+                if (stored == "true") {
+                    details.setAttribute("open", true);
+                } else {
+                    details.removeAttribute("open");
+                }
+            }
+
+            details.addEventListener("toggle", function() {
+                if (this.open) {
+                    localStorage.setItem(key, "true");
+                } else {
+                    localStorage.setItem(key, "false");
+                }
+            })
+        }
+    })
+</script>
+</html>

@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>q1's history</title>
+    <title>
+        q1's history
+    </title>
     <link rel="stylesheet" href="/static/base.css">
     <link rel="icon" type="image/png" href="/static/favicon.png">
     <script src="/static/picturefill.min.js" async=""></script>
@@ -28,30 +30,18 @@
     .three-column, .three-column > div {
         display: flex;
         flex-direction: column;
-        gap: 1em .5em;
-    }
-
-    details {
-        height: fit-content;
+        gap: 1em;
     }
 
     ul {
         padding: 0;
     }
-
     ul ul {
         padding-left: 2.5em;
     }
-
     li {
-        margin-bottom: 1em;
-    }
-    ul li::before {
-        display: none;
-    }
-
-    nav {
-        display: none;
+        margin-bottom: calc(var(--line-height) / 2);
+        list-style-type: none;
     }
 
     @media (min-width: 50em), print {
@@ -71,10 +61,14 @@
 
     @media print {
         body {
-            font-size: 10pt;
+            font-size: 9pt;
+            text-align: left;
         }
         .print-button {
             display: none;
+        }
+        a::after {
+            content: none !important;
         }
     }
 </style>
@@ -83,10 +77,12 @@
 </div>
 <h3>Quewon &quot;Q1&quot; Chin</h3>
 <p>Web &amp; game developer currently based in Paris, France.</p>
+<div class="monospace">
 <p>Email:     <a href="mailto:quewon.chin@gmail.com">quewon.chin@gmail.com</a><br>
-LinkedIn:  <a href="https://www.linkedin.com/in/quewon-chin/" target="_blank" rel="noopener noreferrer">linkedin.com/in/quewon-chin</a><br>
 GitHub:    <a href="https://github.com/quewon" target="_blank" rel="noopener noreferrer">github.com/quewon</a><br>
 Website:   <a href="/">quewon.github.io</a></p>
+</div>
+<br>
 <div class="three-column">
 <details open="">
     <summary>Games</summary>
@@ -153,8 +149,7 @@ Development</li>
     <summary>Education</summary>
 <ul>
 <li>Dong-ah Institute of Media and Arts<br>
-BA in Media Contents Production, 2024–2025<br>
-AA in New Media Contents, 2021–2024</li>
+BA in Media Contents Production, 2021–2025</li>
 </ul>
 </details>
 <details open="">

@@ -3,70 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>archive</title>
+    <title>
+        archive
+    </title>
     <link rel="stylesheet" href="/static/base.css">
     <link rel="icon" type="image/png" href="/static/favicon.png">
     <script src="/static/picturefill.min.js" async=""></script>
 </head>
 <body>
 
-    <style>
-    @media (min-width: 55rem) {
-        header {
-            position: fixed; 
-            margin: var(--body-margin);
-            top: 0;
-            left: 0;
-        }
-        header p {
-            margin-top: 0;
-        }
-        body {
-            margin-left: auto;
-        }
-    }
-</style>
+    
 <header>
-    <nav>
-        <button style="margin-right: 1ch" onclick="history.back()">↩</button><a href="/">home</a> · archive</nav>
+    <nav><a href="/">home</a> · <!--archive-->
+                archive</nav>
 </header>
-<p>index</p>
-<p></p><div>
-<span>2025</span>
-<span>
-<a href="https://quewon.github.io/html-day-2025/" target="_blank" rel="noopener noreferrer">html day 2025</a>
-</span>
-</div>
-<div>
-<span>2025</span>
-<span>
-<a href="/projects/2025-data-garden/">Data Garden</a>
-</span>
-</div>
-<div>
-<span>2025</span>
-<span>
-<a href="/projects/2025-chessboard/">a chess set</a>
-</span>
-</div>
-<div>
-<span>2024</span>
-<span>
-<a href="https://quewon.github.io/html-day/" target="_blank" rel="noopener noreferrer">html day 2024</a>
-</span>
-</div>
-<div>
-<span>2024</span>
-<span>
-<a href="/projects/2024-untitled-social/">untitled social</a>
-</span>
-</div><p></p>
+
 <style>
-    div {
-        display: flex;
-        gap: 2ch;
+    aside {
+        position: fixed; 
+        top: 0; 
+        right: 0;
+        padding: var(--body-margin);
+        box-sizing: border-box;
+        width: 50vw;
+        height: 100vh;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow: -moz-scrollbars-none;
+        overflow-y: scroll;
+    }
+
+    main {
+        max-width: calc(50vw - var(--body-margin) * 2);
+    }
+
+    @media (max-width: 600px) {
+        aside {
+            position: relative;
+            padding: 0;
+            height: unset;
+            width: unset;
+        }
+
+        main {
+            max-width: unset;
+        }
     }
 </style>
+<main>
+</main>
+<aside class="monospace">
+<p>index</p>
+<p></p><ul><p></p>
+<p><li><a href="https://quewon.github.io/html-day-2025/" target="_blank" rel="noopener noreferrer">html day 2025</a></li>
+<li><a href="/projects/a%20chess%20set/">a chess set</a></li>
+<li><a href="/projects/Data%20Garden/">Data Garden</a></li>
+<li><a href="https://quewon.github.io/html-day/" target="_blank" rel="noopener noreferrer">html day 2024</a></li>
+<li><a href="/projects/untitled%20social/">untitled social</a></li></p></ul><p></p>
+</aside>
     
 </body>
 
