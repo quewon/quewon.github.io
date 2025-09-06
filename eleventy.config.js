@@ -8,17 +8,21 @@ export default function (config) {
 
     config.setLibrary("md", md({
             html: true
-        }).use(iterator, 'figure_images', 'image', function (tokens, i) {
+        }).use(iterator, 'figure_image', 'image', function (tokens, i) {
             const token = tokens[i];
-            const html = `
+            var img = `<img src="${token.attrGet('src') || ''}" alt="${token.content || ''}">`;
+            if (tokens.length > 1) {
+                const link = tokens[i + 1];
+                img = `<a href="${link.content.slice(1, -1)}">${img}</a>`;
+                link.content = "";
+            }
+            token.type = "html_inline";
+            token.content = `
                 <figure>
-                    <img src="${token.attrGet('src') || ''}" alt="${token.content || ''}">
+                    ${img}
                     <figcaption>${token.content}</figcaption>
                 </figure>
-            `;
-
-            token.type = "html_inline";
-            token.content = html;
+            `;;
         }).use(iterator, 'url_new_win', 'link_open', function (tokens, i) {
             const [attrName, href] = tokens[i].attrs.find(attr => attr[0] === 'href');
             if (href && (href.startsWith("https://") || href.startsWith("http://"))) {

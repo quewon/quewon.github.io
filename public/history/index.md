@@ -22,30 +22,18 @@ title: q1's history
     .three-column, .three-column > div {
         display: flex;
         flex-direction: column;
-        gap: 1em .5em;
-    }
-
-    details {
-        height: fit-content;
+        gap: 1em;
     }
 
     ul {
         padding: 0;
     }
-
     ul ul {
         padding-left: 2.5em;
     }
-
     li {
-        margin-bottom: 1em;
-    }
-    ul li::before {
-        display: none;
-    }
-
-    nav {
-        display: none;
+        margin-bottom: calc(var(--line-height) / 2);
+        list-style-type: none;
     }
 
     @media (min-width: 50em), print {
@@ -65,15 +53,19 @@ title: q1's history
 
     @media print {
         body {
-            font-size: 10pt;
+            font-size: 9pt;
+            text-align: left;
         }
         .print-button {
             display: none;
         }
+        a::after {
+            content: none !important;
+        }
     }
 </style>
 
-<div class="print-button" class="hide-on-print">
+<div class="print-button">
     <button onclick="print()">Download this CV!</button><br><br>
 </div>
 
@@ -81,10 +73,15 @@ title: q1's history
 
 Web & game developer currently based in Paris, France.
 
-Email:&nbsp;&nbsp;&nbsp;&nbsp; [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
-LinkedIn:&nbsp; [linkedin.com/in/quewon-chin](https://www.linkedin.com/in/quewon-chin/)  
-GitHub:&nbsp;&nbsp;&nbsp; [github.com/quewon](https://github.com/quewon)  
-Website:&nbsp;&nbsp; [quewon.github.io](/)
+<div class="monospace">
+
+    Email:&nbsp;&nbsp;&nbsp;&nbsp; [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
+    GitHub:&nbsp;&nbsp;&nbsp; [github.com/quewon](https://github.com/quewon)  
+    Website:&nbsp;&nbsp; [quewon.github.io](/)
+
+</div>
+
+<br>
 
 <div class="three-column">
 <details open>
@@ -144,8 +141,7 @@ Website:&nbsp;&nbsp; [quewon.github.io](/)
     <summary>Education</summary>
 
 - Dong-ah Institute of Media and Arts  
-  BA in Media Contents Production, 2024–2025  
-  AA in New Media Contents, 2021–2024
+  BA in Media Contents Production, 2021–2025  
 
 </details>
 

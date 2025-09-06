@@ -1,0 +1,28 @@
+---
+layout: base.html
+---
+
+<header>
+    <nav>
+        {%- assign pages = page.url | split: "/" -%}
+        {%- for folder in pages -%}
+            {%- if forloop.first -%}
+                <a href="/">home</a>
+            {%- elsif forloop.last -%}
+                <!-- {%- if title -%}
+                    {{ title }}
+                {%- else -%}
+                    {{ date | date: dateFormat }}
+                {%- endif -%} -->
+                {{ title }}
+            {%- else -%}
+                {%- assign path = pages | slice: 0, forloop.index | join: '/' -%}
+                {%- assign page = collections.all | getPage: path -%}
+                <a href="{{ path }}">{{ page.data.title | default: folder }}</a>
+            {%- endif -%}
+            {% unless forloop.last %} · {% endunless %}
+        {%- endfor -%}
+    </nav>
+</header>
+
+{{ content }}
