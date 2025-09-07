@@ -75,7 +75,7 @@ figure:hover figcaption {
     box-sizing: border-box;
     line-height: var(--line-height);
     width: max-content;
-    max-width: calc(100% - 3em);
+    max-width: min(calc(100% - 3em), 20em);
     background: var(--link-color);
     color: white;
     display: block;
