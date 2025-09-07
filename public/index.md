@@ -3,7 +3,7 @@ layout: base.html
 title: hello
 ---
 
-<div class="center" style="top: 45%; max-width: 15em;">
+<div class="center" style="max-width: 15em;">
 
     ![A physical chessboard. The board is white and green with notions. The pieces are white and black and short in height.](projects/attachments/chessboard.png)(/projects/a chess set)
 
