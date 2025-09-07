@@ -1,7 +1,7 @@
 {
     "scripts": {
         "build": "npx @11ty/eleventy",
-        "start": "npx @11ty/eleventy --serve --quiet"
+        "start": "npx @11ty/eleventy --serve"
     },
     "type": "module",
     "main": "eleventy.config.js",
