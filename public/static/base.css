@@ -17,6 +17,9 @@ body {
     font-family: 'Times', 'Times New Roman', 'Nanum Myeongjo', serif;
     line-height: var(--line-height);
 }
+h1, h2, h3, h4, h5, h5 {
+    line-height: var(--line-height);
+}
 
 a, button {
     text-decoration: none;
@@ -45,10 +48,14 @@ button {
 
 details summary {
     cursor: pointer;
+    border: 1px dotted transparent;
 }
 details summary:hover,
 details[open] summary {
-    background: rgb(239, 239, 239);
+    border-color: lightgray;
+}
+details[open] summary {
+    font-style: italic;
 }
 
 img {
