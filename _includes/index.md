@@ -20,7 +20,8 @@ dateFormat: "%Y-%m-%d"
     }
 
     main {
-        max-width: calc(50vw - var(--body-margin) * 2);
+        width: 35em;
+        max-width: calc(50vw - var(--body-margin) * 1.5);
     }
 
     @media (max-width: 600px) {
@@ -32,6 +33,7 @@ dateFormat: "%Y-%m-%d"
         }
 
         main {
+            width: unset;
             max-width: unset;
         }
     }
