@@ -37,7 +37,7 @@ export default function (config) {
     });
 
     config.addPlugin(eleventyImageTransformPlugin, {
-        formats: ["webp", "jpeg"],
+        formats: ["webp", "jpeg", "png"],
         widths: [300, 600, 1800],
         htmlOptions: {
             imgAttributes: {
