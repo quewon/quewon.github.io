@@ -87,6 +87,12 @@ Web & game developer currently based in Paris, France.
 <details open>
     <summary>Games</summary>
 
+- 2025
+
+    - [10,000 rooms you could call home](https://frogmen.itch.io/10000-rooms-you-could-call-home)
+    - [minecraft screenshots folder](https://frogmen.itch.io/minecraft-screenshots-folder)
+    - [transitory thoughts](https://frogmen.itch.io/transitory-thoughts)
+
 - 2024
 
     - [how to use the subway](https://frogmen.itch.io/subway)
@@ -122,11 +128,11 @@ Web & game developer currently based in Paris, France.
 
 - [Artist Portfolio Website](https://aylas-wip-portfolio.netlify.app/), 2025  
   Development, design
-- [untitled social](/projects/2024-untitled-social), 2024–Present  
+- [untitled social](/projects/untitled%20social), 2024–Present  
   Development, design
 - [Korea Art Directors Association (KADA) Homepage](https://kada-art.org/), 2024  
   Development, design
-- [Data Garden](/projects/2025-data-garden), 2024  
+- [Data Garden](/projects/data%20garden), 2024  
   Development
 - [《가치의 재생》 Exhibition Website](https://dima-newcon.github.io/2023/), 2023  
   Development
@@ -141,7 +147,7 @@ Web & game developer currently based in Paris, France.
     <summary>Education</summary>
 
 - Dong-ah Institute of Media and Arts  
-  BA in Media Contents Production, 2021–2025  
+  BA in Media Contents Production, 2021–2025
 
 </details>
 
