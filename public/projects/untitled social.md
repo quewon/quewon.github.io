@@ -16,6 +16,6 @@ It's built on Node.js using ejs views. There is no user system. Users make posts
 
 ![A page where you can write and upload your post.](attachments/untitled-social-post-builder.png)
 
-[Here](/text/2024-11-19-untitled-social) is a link to a copy of one of the first posts I made on untitled social, writing in length about what I wanted it to be.
+[Here](/text/untitled social manifesto) is a link to a copy of one of the first posts I made on untitled social, writing in length about what I wanted it to be.
 
 As of May 2025 it has been about 6 months since I shared the link with my friends, and  <b>untitled social</b> has settled as a place to post noncommittally, among known and close friends, random thoughts or news or seeking advice. 871 posts have been made between 6 people. There were 348 posts made in November which has dropped down to 22 posts made in April. Some friends use it more frequently than others. Some write longer posts. For me, it continues to fill a gap that I feel in the internet.
