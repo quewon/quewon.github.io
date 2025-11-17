@@ -132,7 +132,7 @@ Web & game developer currently based in Paris, France.
   Development, design
 - [Korea Art Directors Association (KADA) Homepage](https://kada-art.org/), 2024  
   Development, design
-- [Data Garden](/projects/data%20garden), 2024  
+- [Data Garden](/projects/Data%20Garden), 2024  
   Development
 - [《가치의 재생》 Exhibition Website](https://dima-newcon.github.io/2023/), 2023  
   Development

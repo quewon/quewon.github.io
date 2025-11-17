@@ -17,6 +17,11 @@ body {
     font-family: 'Times', 'Times New Roman', 'Nanum Myeongjo', serif;
     line-height: var(--line-height);
 }
+*[lang=ko] {
+    font-size: 15px;
+    line-height: 1.6em;
+}
+
 h1, h2, h3, h4, h5, h5 {
     line-height: var(--line-height);
 }
@@ -103,7 +108,8 @@ li {
 
 .monospace,
 header,
-a::after {
+a::after,
+figure:hover figcaption {
     font-family: var(--monospace);
     font-size: 13px;
 }
