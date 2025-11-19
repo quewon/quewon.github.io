@@ -1,0 +1,38 @@
+media:
+  - name: projects
+    label: Projects
+    input: public/projects/attachments
+    output: /public/projects/attachments
+  - name: text
+    label: Text
+    input: public/text/attachments
+    output: /public/text/attachments
+content:
+  - name: projects
+    label: Projects
+    type: collection
+    path: public/projects
+    view:
+      fields: [ date ]
+    fields:
+      - { name: date, label: Date, type: date }
+      - { name: redirect, label: Redirect, type: string }
+      - { name: body, label: Body, type: rich-text }
+  - name: text
+    label: Text
+    type: collection
+    path: public/text
+    view:
+      fields: [ date, eleventyExcludeFromCollections ]
+    fields:
+      - { name: date, label: Date, type: date }
+      - { name: eleventyExcludeFromCollections, label: Draft, type: boolean }
+      - { name: redirect, label: Redirect, type: string }
+      - { name: body, label: Body, type: rich-text }
+  - name: history
+    label: History
+    type: file
+    path: public/history/index.md
+    fields:
+      - { name: layout, type: string, hidden: true, default: layouts/base.html }
+      - { name: body, label: Body, type: rich-text }
