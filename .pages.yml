@@ -1,10 +1,10 @@
 media:
   - name: projects
-    label: Projects
+    label: "Project Attachments"
     input: public/projects/attachments
     output: /public/projects/attachments
   - name: text
-    label: Text
+    label: "Text Attachments"
     input: public/text/attachments
     output: /public/text/attachments
 content:
