@@ -1,4 +1,5 @@
 ---
+slug: untitled social manifesto
 date: 2024-11-19
 source-name: untitled social
 source: /projects/2024-untitled-social

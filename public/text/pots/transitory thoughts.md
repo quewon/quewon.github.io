@@ -1,5 +1,5 @@
 ---
+slug: transitory thoughts
 date: 2025-06-30
-title: transitory thoughts
 redirect: https://frogmen.itch.io/transitory-thoughts
 ---

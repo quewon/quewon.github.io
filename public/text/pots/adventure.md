@@ -1,5 +1,5 @@
 ---
+slug: adventure
 date: 2025-04-26
-title: adventure
 redirect: https://quewon.github.io/pots/3/index.html
 ---

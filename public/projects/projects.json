@@ -1,6 +1,5 @@
 {
     "layout": "post.md",
     "tags": "archive",
-    "collection": "archive",
-    "dateFormat": "%Y"
+    "collection": "archive"
 }

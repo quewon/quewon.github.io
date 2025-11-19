@@ -1,4 +1,5 @@
 ---
+slug: untitled social
 date: 2024-01-01
 ---
 

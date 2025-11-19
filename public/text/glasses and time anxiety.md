@@ -1,4 +1,5 @@
 ---
+slug: glasses and time anxiety
 date: 2022-12-20
 source-name: cohost
 source: https://web.archive.org/web/20250101180153/https://cohost.org/fishfood/post/660690-empty

@@ -1,4 +1,5 @@
 ---
+slug: Data Garden
 date: 2025-01-01
 ---
 

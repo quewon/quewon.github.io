@@ -1,5 +1,5 @@
 ---
-eleventyExcludeFromCollections: true
+draft: true
 ---
 
 i redesigned this website! using [11ty](https://www.11ty.dev), which is my first static site generator. i'm kind of in love.
