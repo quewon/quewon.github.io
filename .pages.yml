@@ -13,26 +13,31 @@ content:
     type: collection
     path: public/projects
     view:
-      fields: [ date ]
+      fields: [ date, title, redirect, eleventyExcludeFromCollections ]
     fields:
+      - { name: title, label: Title, type: string }
       - { name: date, label: Date, type: date }
+      - { name: eleventyExcludeFromCollections, label: Draft, type: boolean }
       - { name: redirect, label: Redirect, type: string }
       - { name: body, label: Body, type: rich-text }
+    filename: "{primary}.md"
   - name: text
     label: Text
     type: collection
     path: public/text
     view:
-      fields: [ date, eleventyExcludeFromCollections ]
+      fields: [ date, title, redirect, eleventyExcludeFromCollections ]
     fields:
+      - { name: title, label: Title, type: string }
       - { name: date, label: Date, type: date }
       - { name: eleventyExcludeFromCollections, label: Draft, type: boolean }
       - { name: redirect, label: Redirect, type: string }
       - { name: body, label: Body, type: rich-text }
+    filename: "{primary}.md"
   - name: history
     label: History
     type: file
     path: public/history/index.md
     fields:
-      - { name: layout, type: string, hidden: true, default: layouts/base.html }
+      - { name: layout, type: string, hidden: true }
       - { name: body, label: Body, type: rich-text }
