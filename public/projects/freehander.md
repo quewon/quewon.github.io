@@ -1,5 +1,5 @@
 ---
-slug: freehander
+slug: Freehander
 date: 2025-11-20
 draft: false
 ---
@@ -9,7 +9,7 @@ I started working on this tool because I love text games, the kind that's free, 
 
 This summer I took part in a game jam with two friends where I prototyped a simple point-and-click game. In the end, all of us ended up too busy to submit anything to the jam, but I enjoyed the process and feel of this prototype so much that I used the code to create SPNC.
 
-Since last year, I've been dissastisfied by the abstract and minimal visual style that I settled on in my games and started thinking about using photographs and collage. Looking back, this idea runs parallel to [my desire to create more specific, grounded narratives](https://quewon.github.io/text/thinkin-on-text/). Naturally I want to make more text games, but this time in a multimedia form. SPNC felt like a step closer to that. I made a silly game about [minecraft nostalgia](https://frogmen.itch.io/minecraft-screenshots-folder) using it.
+Since last year, I've been dissastisfied by the abstract and minimal visual style that I settled on in my games and started thinking about using photographs and collage. Looking back, this idea runs parallel to [my desire to create more specific, grounded narratives](/text/thinkin-on-text/). Naturally I want to make more text games, but this time in a multimedia form. SPNC felt like a step closer to that. I made a silly game about [minecraft nostalgia](https://frogmen.itch.io/minecraft-screenshots-folder) using it.
 
 I enjoyed thinking of SPNC, which essentially creates games that are a series of slides, like a powerpoint presentation, as a tool that could theoretically create any game. Freehander is a complete expansion on SPNC that makes it way easier to organize and customize interactions, supports any kind of media from video to audio to images, and is built on native HTML elements rather than the HTML Canvas.
 
