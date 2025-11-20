@@ -62,7 +62,7 @@ Web & game developer currently based in Paris, France.
 
 ## Web
 
-*   [Freehander](https://freehander.netlify.app/), 2025  
+*   [Freehander](/projects/freehander), 2025  
     Development, design
     
 *   [Artist Portfolio Website](https://aylas-wip-portfolio.netlify.app/), 2025  
