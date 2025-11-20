@@ -37,14 +37,14 @@ export default function (config) {
     });
 
     config.addPlugin(eleventyImageTransformPlugin, {
-        formats: ["webp", "jpeg"],
-        widths: [1800],
-        // htmlOptions: {
-        //     imgAttributes: {
-        //         loading: "lazy",
-        //         decoding: "async"
-        //     }
-        // }
+        formats: ["webp", "png"],
+        widths: [1800, 1000, 600],
+        htmlOptions: {
+            imgAttributes: {
+                loading: "lazy",
+                decoding: "async"
+            }
+        }
     });
 
     return {
