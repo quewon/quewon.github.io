@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        freehander
+    </title>
+    <link rel="stylesheet" href="/static/base.css">
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <script src="/static/picturefill.min.js" async=""></script>
+</head>
+<body>
+
+    
+<header>
+    <nav><a href="/">home</a> · <a href="/projects">archive</a> · <!--freehander-->
+                freehander</nav>
+</header>
+
+<style>
+    aside {
+        position: fixed; 
+        top: 0; 
+        right: 0;
+        padding: var(--body-margin);
+        box-sizing: border-box;
+        width: 50vw;
+        height: 100vh;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow: -moz-scrollbars-none;
+        overflow-y: scroll;
+    }
+
+    main {
+        width: 35em;
+        max-width: calc(50vw - var(--body-margin) * 1.5);
+    }
+
+    @media (max-width: 600px) {
+        aside {
+            position: relative;
+            padding: 0;
+            height: unset;
+            width: unset;
+        }
+
+        main {
+            width: unset;
+            max-width: unset;
+        }
+    }
+</style>
+<main>
+    <style>
+    @media (max-width: 600px) {
+        aside {
+            display: none;
+        }
+    }
+</style>
+<div class="post">
+    <p><a href="https://freehander.netlify.app/" target="_blank" rel="noopener noreferrer"><strong>Freehander</strong></a> is a tool for creating simple HTML games. It was inspired by tools like Twine, Pico-8, Bitsy, bipsi, windowpane, Ren'Py. It's my most recent iteration of a tool for making point-and-click web games, the first being my <a href="https://quewon.github.io/spnc/" target="_blank" rel="noopener noreferrer">simple point n' clicker (or SPNC for short)</a>.</p>
+<p>I started working on this tool because I love text games, the kind that's free, short, and has a kind of <a href="https://jackkutilek.com/writing/timestepped-gamefeel/" target="_blank" rel="noopener noreferrer">timestepped gamefeel</a> that makes them a joy to interact with. Not just reading, but clicking, pausing, mousing, scrolling. Text fading in, text snapping into existence, text typing itself out. Also, usually developed using Twine. I used Twine for a while before I started imagining grander games and felt limited by its nature.</p>
+<p>This summer I took part in a game jam with two friends where I prototyped a simple point-and-click game. In the end, all of us ended up too busy to submit anything to the jam, but I enjoyed the process and feel of this prototype so much that I used the code to create SPNC.</p>
+<p>Since last year, I've been dissastisfied by the abstract and minimal visual style that I settled on in my games and started thinking about using photographs and collage. Looking back, this idea runs parallel to <a href="https://quewon.github.io/text/thinkin-on-text/" target="_blank" rel="noopener noreferrer">my desire to create more specific, grounded narratives</a>. Naturally I want to make more text games, but this time in a multimedia form. SPNC felt like a step closer to that. I made a silly game about <a href="https://frogmen.itch.io/minecraft-screenshots-folder" target="_blank" rel="noopener noreferrer">minecraft nostalgia</a> using it.</p>
+<p>I enjoyed thinking of SPNC, which essentially creates games that are a series of slides, like a powerpoint presentation, as a tool that could theoretically create any game. Freehander is a complete expansion on SPNC that makes it way easier to organize and customize interactions, supports any kind of media from video to audio to images, and is built on native HTML elements rather than the HTML Canvas.</p>
+<p>Ultimately it's a tool I've created to enable myself to experiment with visual style and create ever simpler, ever more text-heavy games. Time will tell if that's how it ends up working out for me!</p>
+</div>
+</main>
+<aside class="monospace">
+<p>index</p>
+<p></p><ul><p></p>
+<p><li><i>freehander
+</i></li>
+<li><a href="https://quewon.github.io/html-day-2025/" target="_blank" rel="noopener noreferrer">html day 2025</a></li>
+<li><a href="/projects/a%20chess%20set/">a chess set</a></li>
+<li><a href="/projects/Data%20Garden/">Data Garden</a></li>
+<li><a href="https://quewon.github.io/html-day/" target="_blank" rel="noopener noreferrer">html day 2024</a></li>
+<li><a href="/projects/untitled%20social/">untitled social</a></li></p></ul><p></p>
+</aside>
+    
+</body>
+
+<script>
+    window.addEventListener("load", () => {
+        var detailsList = document.querySelectorAll("details");
+        for (let i=0; i<detailsList.length; i++) {
+            const details = detailsList[i];
+            const key = "detail-" + location.pathname.replaceAll("/", "-") + i;
+            const stored = localStorage.getItem(key);
+
+            if (stored) {
+                if (stored == "true") {
+                    details.setAttribute("open", true);
+                } else {
+                    details.removeAttribute("open");
+                }
+            }
+
+            details.addEventListener("toggle", function() {
+                if (this.open) {
+                    localStorage.setItem(key, "true");
+                } else {
+                    localStorage.setItem(key, "false");
+                }
+            })
+        }
+    })
+</script>
+</html>
