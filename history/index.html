@@ -27,10 +27,27 @@
     })
 </script>
 <style>
+    .three-column {
+        margin-top: 2em;
+    }
     .three-column, .three-column > div {
         display: flex;
         flex-direction: column;
         gap: 1em;
+        height: fit-content;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+    table, tr, td {
+        font-family: var(--monospace);
+        font-size: var(--monospace-size);
+        padding: 0;
+        border-collapse: collapse;
+    }
+    td:last-child {
+        padding-left: 3ch;
     }
 
     ul {
@@ -75,17 +92,31 @@
 <div class="print-button">
     <button onclick="print()">Download this CV!</button><br><br>
 </div>
-<h3>Quewon &quot;Q1&quot; Chin</h3>
+<h1>Quewon &quot;Q1&quot; Chin</h1>
 <p>Web &amp; game developer currently based in Paris, France.</p>
-<div class="monospace">
-<p>Email:     <a href="mailto:quewon.chin@gmail.com">quewon.chin@gmail.com</a><br>
-GitHub:    <a href="https://github.com/quewon" target="_blank" rel="noopener noreferrer">github.com/quewon</a><br>
-Website:   <a href="/">quewon.github.io</a></p>
-</div>
-<br>
-<div class="three-column">
-<details open="">
-    <summary>Games</summary>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Email:</td>
+<td><a href="mailto:quewon.chin@gmail.com">quewon.chin@gmail.com</a></td>
+</tr>
+<tr>
+<td>GitHub:</td>
+<td><a href="https://github.com/quewon" target="_blank" rel="noopener noreferrer">github.com/quewon</a></td>
+</tr>
+<tr>
+<td>Website:</td>
+<td><a href="/">quewon.github.io</a></td>
+</tr>
+</tbody>
+</table>
+<h2>Games</h2>
 <ul>
 <li>
 <p>2025</p>
@@ -134,9 +165,8 @@ Website:   <a href="/">quewon.github.io</a></p>
 </ul>
 </li>
 </ul>
-</details>
-<details open="">
-    <summary>Web</summary>
+<hr>
+<h2>Web</h2>
 <ul>
 <li><a href="https://aylas-wip-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer">Artist Portfolio Website</a>, 2025<br>
 Development, design</li>
@@ -151,17 +181,13 @@ Development</li>
 <li><a href="http://www.nkpt.com/" target="_blank" rel="noopener noreferrer">NKTech Power Cylinders Catalogue Website</a>, 2023<br>
 Development</li>
 </ul>
-</details>
-<div>
-<details open="">
-    <summary>Education</summary>
+<hr>
+<h2>Education</h2>
 <ul>
 <li>Dong-ah Institute of Media and Arts<br>
 BA in Media Contents Production, 2021–2025</li>
 </ul>
-</details>
-<details open="">
-    <summary>Exhibitions</summary>
+<h2>Exhibitions</h2>
 <ul>
 <li><em>Play. Net : Zero-sum Game</em>, RnL Rosenlime Gallery, 2024</li>
 <li>(주)첨단메모리시스템, MatMul Gallery, 2024</li>
@@ -169,9 +195,36 @@ BA in Media Contents Production, 2021–2025</li>
 <li>뉴미디어 유니버스, Gyeonggi Art Center, 2022</li>
 <li><em>Dear Deer</em>, Dong-ah Institute of Media and Arts, 2021</li>
 </ul>
-</details>
-</div>
-</div>
+<script>
+    var columnDiv = document.createElement("div");
+    columnDiv.className = "three-column";
+    document.body.appendChild(columnDiv);
+
+    var currentElement = document.querySelector("h2");
+    var currentDiv = document.createElement("div");
+    columnDiv.appendChild(currentDiv);
+
+    while (currentElement) {
+        if (currentElement.tagName === "H2") {
+            var details = document.createElement("details");
+            details.setAttribute("open", true);
+            var summary = document.createElement("summary");
+            summary.textContent = currentElement.textContent;
+            details.appendChild(summary);
+            var list = currentElement.nextElementSibling;
+            details.appendChild(list);
+            currentDiv.appendChild(details);
+        } else if (currentElement.tagName === "HR") {
+            currentDiv = document.createElement("div");
+            columnDiv.appendChild(currentDiv);
+        } else {
+            break;
+        }
+        var nextElement = currentElement.nextElementSibling;
+        currentElement.remove();
+        currentElement = nextElement;
+    }
+</script>
     
 </body>
 

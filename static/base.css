@@ -8,6 +8,7 @@
     --line-height: 1.3em;
     --body-margin: 2em;
     --monospace: 'Atkinson Hyperlegible Mono', monospace;
+    --monospace-size: 13px;
 }
 
 body {
@@ -111,5 +112,5 @@ header,
 a::after,
 figure:hover figcaption {
     font-family: var(--monospace);
-    font-size: 13px;
+    font-size: var(--monospace-size);
 }
