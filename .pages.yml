@@ -1,6 +1,6 @@
 media:
   - name: media
-    label: Attachments
+    label: Media
     input: public/static/attachments
     output: /static/attachments
 content:
