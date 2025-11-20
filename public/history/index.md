@@ -1,91 +1,19 @@
 ---
-layout: base.html
+layout: history.md
 title: q1's history
 ---
 
-<script>
-    window.addEventListener("beforeprint", () => {
-        for (let element of document.querySelectorAll("details")) {
-            element.dataset.openBeforePrint = element.open;
-            element.open = true;
-        }
-    })
-    
-    window.addEventListener("afterprint", () => {
-        for (let element of document.querySelectorAll("details")) {
-            element.open = element.dataset.openBeforePrint == "true" ? true : false;
-        }
-    })
-</script>
-
-<style>
-    .three-column, .three-column > div {
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-    }
-
-    ul {
-        padding: 0;
-    }
-    ul ul {
-        padding-left: 2.5em;
-    }
-    li {
-        margin-bottom: calc(var(--line-height) / 2);
-        list-style-type: none;
-    }
-
-    @media (min-width: 50em), print {
-        body {
-            max-width: unset;
-        }
-        .three-column {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
-        .print-button {
-            position: fixed; 
-            right: var(--body-margin); 
-            top: var(--body-margin);
-        }
-    }
-
-    @media print {
-        body {
-            font-size: 9pt;
-            text-align: left;
-        }
-        .print-button {
-            display: none;
-        }
-        a::after {
-            content: none !important;
-        }
-    }
-</style>
-
-<div class="print-button">
-    <button onclick="print()">Download this CV!</button><br><br>
-</div>
-
-### Quewon "Q1" Chin
+# Quewon "Q1" Chin
 
 Web & game developer currently based in Paris, France.
 
-<div class="monospace">
+|          |                                                       |
+|----------|-------------------------------------------------------|
+| Email:   | [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com) |
+| GitHub:  | [github.com/quewon](https://github.com/quewon)        |
+| Website: | [quewon.github.io](/)                                 |
 
-    Email:&nbsp;&nbsp;&nbsp;&nbsp; [quewon.chin@gmail.com](mailto:quewon.chin@gmail.com)  
-    GitHub:&nbsp;&nbsp;&nbsp; [github.com/quewon](https://github.com/quewon)  
-    Website:&nbsp;&nbsp; [quewon.github.io](/)
-
-</div>
-
-<br>
-
-<div class="three-column">
-<details open>
-    <summary>Games</summary>
+## Games
 
 - 2025
 
@@ -121,10 +49,9 @@ Web & game developer currently based in Paris, France.
 
     - [whales and broken hearts](https://frogmen.itch.io/whales-and-broken-hearts)
 
-</details>
+---
 
-<details open>
-    <summary>Web</summary>
+## Web
 
 - [Artist Portfolio Website](https://aylas-wip-portfolio.netlify.app/), 2025  
   Development, design
@@ -139,28 +66,17 @@ Web & game developer currently based in Paris, France.
 - [NKTech Power Cylinders Catalogue Website](http://www.nkpt.com/), 2023  
   Development
 
-</details>
+---
 
-<div>
-
-<details open>
-    <summary>Education</summary>
+## Education
 
 - Dong-ah Institute of Media and Arts  
   BA in Media Contents Production, 2021–2025
 
-</details>
-
-<details open>
-    <summary>Exhibitions</summary>
+## Exhibitions
 
 - *Play. Net : Zero-sum Game*, RnL Rosenlime Gallery, 2024
 - (주)첨단메모리시스템, MatMul Gallery, 2024
 - 가치의 재생, Gyeonggi Art Center, 2023
 - 뉴미디어 유니버스, Gyeonggi Art Center, 2022
 - *Dear Deer*, Dong-ah Institute of Media and Arts, 2021
-
-</details>
-
-</div>
-</div>

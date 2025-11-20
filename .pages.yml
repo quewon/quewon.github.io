@@ -41,5 +41,5 @@ content:
     type: file
     path: public/history/index.md
     fields:
-      - { name: layout, type: string, hidden: true }
+      - { name: layout, type: string, default: history.md, hidden: true }
       - { name: body, label: Body, type: rich-text }
