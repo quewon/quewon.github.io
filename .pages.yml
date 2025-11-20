@@ -16,7 +16,7 @@ content:
       fields: [ date, slug, redirect, draft ]
     fields:
       - { name: slug, label: Slug, type: string }
-      - { name: date, label: Date, type: date }
+      - { name: date, label: Date, type: date, required: true }
       - { name: draft, label: Draft, type: boolean }
       - { name: redirect, label: Redirect, type: string }
       - { name: body, label: Body, type: rich-text }
@@ -30,9 +30,9 @@ content:
       fields: [ date, slug, redirect, draft ]
     fields:
       - { name: slug, label: Slug, type: string }
-      - { name: date, label: Date, type: date }
+      - { name: date, label: Date, type: date, required: true }
       - { name: draft, label: Draft, type: boolean }
-      - { name: source-name, label: "Source Name", type: string },
+      - { name: source-name, label: "Source Name", type: string }
       - { name: source, label: "Source", type: string },
       - { name: redirect, label: Redirect, type: string }
       - { name: body, label: Body, type: rich-text }
