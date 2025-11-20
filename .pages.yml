@@ -21,6 +21,7 @@ content:
       - { name: redirect, label: Redirect, type: string }
       - { name: body, label: Body, type: rich-text }
     filename: "{primary}.md"
+    subfolders: false
   - name: text
     label: Text
     type: collection
@@ -36,6 +37,7 @@ content:
       - { name: redirect, label: Redirect, type: string }
       - { name: body, label: Body, type: rich-text }
     filename: "{primary}.md"
+    subfolders: false
   - name: history
     label: History
     type: file
