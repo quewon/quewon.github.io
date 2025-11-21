@@ -1,5 +1,5 @@
 ---
 layout: index.md
 title: archive
-collection: projects
+collection: archive
 ---
