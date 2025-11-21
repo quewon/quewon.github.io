@@ -29,7 +29,7 @@ content:
       - { name: date, label: Date, type: date, required: true }
       - { name: draft, label: Draft, type: boolean }
       - { name: source-name, label: "Source Name", type: string }
-      - { name: source, label: "Source", type: string },
+      - { name: source, label: "Source", type: string }
       - { name: redirect, label: Redirect, type: string }
       - { name: body, label: Body, type: rich-text }
     filename: "{primary}.md"
