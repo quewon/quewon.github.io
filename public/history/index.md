@@ -94,6 +94,8 @@ Web & game developer currently based in Paris, France.
 *   Dong-ah Institute of Media and Arts  
     BA in Media Contents Production, 2021–2025
     
+*   42Paris, 2025–Present
+    
 
 ## Exhibitions
 
