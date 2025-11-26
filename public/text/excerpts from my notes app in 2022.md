@@ -1,5 +1,6 @@
 ---
 slug: excerpts from my notes app in 2022
+draft: true
 date: 2023-01-04
 source-name: cohost
 source: https://web.archive.org/web/20250106235116/https://cohost.org/fishfood/post/1248506-a-student-answers-th
