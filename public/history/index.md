@@ -62,6 +62,9 @@ Web & game developer currently based in Paris, France.
 
 ## Web
 
+*   [enuitgames.de](https://enuitgames.de/), 2026  
+    Development, design
+    
 *   [midnight commute](https://midnightcommute.neocities.org/), 2025  
     Development, design
     
