@@ -42,7 +42,7 @@ Web & game developer currently based in Paris, France.
 
 ## Web
 
-- *[Under The Red Sky* Level Editor Manual](https://utrs-manual.netlify.app/), 2026  
+- [Level Editor Manual](https://utrs-manual.netlify.app/), 2026  
 Development
 - [enuitgames.de](https://enuitgames.de/), 2026  
 Development, design
